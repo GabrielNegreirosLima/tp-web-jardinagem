@@ -13,6 +13,7 @@ header {
     background-color: #A1FAAA;
     margin-bottom: 8px;
     font-size: 15px;
+    height: 80px;
 
     border-bottom: 3px solid #82d38b;
 }
@@ -24,12 +25,8 @@ header nav {
     margin-left: 50px;
 }
 
-header nav a{
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .logo {
+    width: 30%;
     display: flex;
     gap: 3px;
 }
@@ -40,7 +37,40 @@ header nav a{
 
 .logo h1 {
     font-size: 18px;
-    line-height: 10%;
+}
+
+#alterna-menu {
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    height: 2em;
+    width: 2em;
+    cursor: pointer;
+    border-radius: 3px;
+    border: 1px solid darkgreen;
+    text-align: center;
+    line-height: 2em;
+    box-sizing: border-box;
+}
+
+.botao-header {
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: rgb(137, 255, 137);
+    border: 1px solid darkgreen;
+    border-radius: 30px;
+}
+
+.botao-header:hover{
+    right: 1px;
+    bottom: 1px;
+}
+
+.botao-header a {
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
 }
 
 
