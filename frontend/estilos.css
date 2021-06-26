@@ -1,0 +1,51 @@
+body {
+    margin: 0px;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    position: sticky;
+    justify-content: flex-start;
+    align-items: center;
+    top: 0;
+    background-color: #A1FAAA;
+    margin-bottom: 8px;
+    font-size: 15px;
+
+    border-bottom: 3px solid #82d38b;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin-left: 50px;
+}
+
+header nav a{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo {
+    display: flex;
+    gap: 3px;
+}
+
+.logo img {
+    width: 30px;
+}
+
+.logo h1 {
+    font-size: 18px;
+    line-height: 10%;
+}
+
+
+/* Main */
+main {
+    margin-right: 10px;
+    margin-left: 10px;
+}
