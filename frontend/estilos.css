@@ -60,11 +60,12 @@ body.menu-visivel #barra-lateral {
 }
 
 body.menu-visivel #principal {
-left: 200px;
+    left: 200px;
+    width: calc(100% - 205px);
 }
 
 body.menu-visivel {
-overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 #rodape{
