@@ -6,12 +6,12 @@ html, body {
 .container{
     min-height: 100vh;
     display: grid;
-    grid-template-columns: 20% 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 10% auto 10%;
     grid-template-areas: 
-    "header header"
-    "sidebar main"
-    "footer footer";
+    "header"
+    "main"
+    "footer";
 }
 
 /* Header */
@@ -26,6 +26,7 @@ html, body {
     font-size: 15px;
     border-bottom: 3px solid #82d38b;
     padding: 10px;
+    z-index: 999;
 
     grid-area: header;    
 }
@@ -39,12 +40,31 @@ html, body {
 
 #principal {     
     grid-area: main;
+    position: relative;
+    left: 0;
+    transition: left 200ms ease-out;
     padding: 10px;
 }
 
-#barra-lateral{
-    grid-area: sidebar;
+#barra-lateral {
+    position: relative; 
+    left: -200px;
+    width: 200px; 
     background-color: #A1FAAA;
+    transition: all 200ms ease-out;
+    grid-area: main; 
+}
+
+body.menu-visivel #barra-lateral {
+    left: 0;
+}
+
+body.menu-visivel #principal {
+left: 200px;
+}
+
+body.menu-visivel {
+overflow-x: hidden;
 }
 
 #rodape{
