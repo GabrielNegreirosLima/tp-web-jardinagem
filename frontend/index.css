@@ -7,7 +7,7 @@ html, body {
     min-height: 100vh;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 10% auto 10%;
+    grid-template-rows: auto 90% auto;
     grid-template-areas: 
     "header"
     "main"
@@ -17,6 +17,7 @@ html, body {
 /* Header */
 
 #cabecalho {
+    grid-area: header;
     display: flex;    
     justify-content: flex-start;
     align-items: center;
@@ -27,8 +28,6 @@ html, body {
     border-bottom: 3px solid #82d38b;
     padding: 10px;
     z-index: 999;
-
-    grid-area: header;    
 }
 
 #cabecalho nav {
@@ -36,14 +35,6 @@ html, body {
     justify-content: space-between;
     width: 50%;
     margin-left: 50px;
-}
-
-#principal {     
-    grid-area: main;
-    position: relative;
-    left: 0;
-    transition: left 200ms ease-out;
-    padding: 10px;
 }
 
 .logo {
@@ -73,28 +64,30 @@ html, body {
     bottom: 1px;
 }
 
-/* Main and sidebar */
+/* banner */
+
+.banner{   
+    border: 5px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;    
+}
+
+.banner h1{
+    font-size: 30px;
+    text-align: center;
+}
+
+
+/* sidebar */
 
 #barra-lateral {
+    grid-area: main;
     position: relative; 
     left: -200px;
     width: 200px; 
     background-color: #A1FAAA;
-    transition: all 200ms ease-out;
-    grid-area: main; 
-}
-
-body.menu-visivel #barra-lateral {
-    left: 0;
-}
-
-body.menu-visivel #principal {
-    left: 200px;
-    width: calc(100vw - 205px);
-}
-
-body.menu-visivel {
-    overflow-x: hidden;
+    transition: all 200ms ease-out;     
 }
 
 #toggle-sidebar {   
@@ -109,26 +102,44 @@ body.menu-visivel {
     text-align: center;    
 }
 
+body.menu-visivel #barra-lateral {
+    left: 0;
+}
+
+/* Main */
+
+body.menu-visivel #principal {
+    left: 200px;
+    width: calc(100vw - 210px);
+}
+
+body.menu-visivel {
+    overflow-x: hidden;
+}
+
+#principal {     
+    grid-area: main;
+    position: relative;
+    left: 0;
+    transition: left 200ms ease-out;
+    padding: 10px;
+}
+
 .box-plantas{
-    display: grid;
-    grid-template-columns: repeat(4, calc(90vw/4));
+    display: flex;
+    flex-wrap: wrap;    
+    justify-content: center;    
 }
 
-body.menu-visivel .box-plantas{
-    display: grid;
-    grid-template-columns: repeat(4, calc(85vw/4));
-}
-
-.post-plantas{
-    text-overflow:ellipsis;
-    overflow:hidden;
-    padding: 5px;
-    border-left: 10px solid white;
-    border-right: 10px solid white;
-    border-top: 5px solid white;
-    border-bottom: 5px solid white;
+.post-plantas{    
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding: 1em;    
+    margin: 0.5em;
     background-color: lightpink;
-    height: calc(80vh / 2);
+    text-align: justify;
+    width: 250px;
+    height: 300px;
 }
 
 .foto-planta {
@@ -138,20 +149,6 @@ body.menu-visivel .box-plantas{
     width: 100px;
     height: 100px;
 }
-
-/*.box-plantas{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-}
-
-.post-plantas{
-    padding: 5px;
-    background-color: lightpink;
-    height: 300px;
-    width: calc(100% / 5);
-}*/
-
 
 /* Footer */
 
