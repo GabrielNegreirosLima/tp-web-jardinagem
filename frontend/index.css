@@ -1,0 +1,159 @@
+html, body {
+    margin: 0px;
+    min-height: 100vh;
+}
+
+.container{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 90% auto;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+}
+
+/* Header */
+
+#cabecalho {
+    grid-area: header;
+    display: flex;    
+    justify-content: flex-start;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: #A1FAAA;    
+    font-size: 15px;
+    border-bottom: 3px solid #82d38b;
+    padding: 10px;
+    z-index: 999;
+}
+
+#cabecalho nav {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin-left: 50px;
+}
+
+.logo {
+    width: 30%;
+    display: flex;
+    gap: 3px;
+}
+
+.logo img {
+    width: 30px;
+}
+
+.logo h1 {
+    font-size: 18px;
+}
+
+.botao-header {
+    position: relative;
+    padding: 10px;
+    background-color: rgb(137, 255, 137);
+    border: 1px solid darkgreen;
+    border-radius: 30px;
+}
+
+.botao-header:hover{
+    right: 1px;
+    bottom: 1px;
+}
+
+/* banner */
+
+.banner{   
+    border: 5px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;    
+}
+
+.banner h1{
+    font-size: 30px;
+    text-align: center;
+}
+
+
+/* sidebar */
+
+#barra-lateral {
+    grid-area: main;
+    position: relative; 
+    left: -200px;
+    width: 200px; 
+    background-color: #A1FAAA;
+    transition: all 200ms ease-out;     
+}
+
+#toggle-sidebar {   
+    position: relative;
+    margin: 20px;
+    top: 0%;
+    height: 2em;
+    width: 2em;
+    cursor: pointer;
+    border-radius: 3px;
+    border: 1px solid darkgreen;
+    text-align: center;    
+}
+
+body.menu-visivel #barra-lateral {
+    left: 0;
+}
+
+/* Main */
+
+body.menu-visivel #principal {
+    left: 200px;
+    width: calc(100vw - 210px);
+}
+
+body.menu-visivel {
+    overflow-x: hidden;
+}
+
+#principal {     
+    grid-area: main;
+    position: relative;
+    left: 0;
+    transition: left 200ms ease-out;
+    padding: 10px;
+}
+
+.box-plantas{
+    display: flex;
+    flex-wrap: wrap;    
+    justify-content: center;    
+}
+
+.post-plantas{    
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding: 1em;    
+    margin: 0.5em;
+    background-color: lightpink;
+    text-align: justify;
+    width: 250px;
+    height: 300px;
+}
+
+.foto-planta {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    height: 100px;
+}
+
+/* Footer */
+
+#rodape{
+    grid-area: footer;  
+    padding: 10px;  
+    background-color: #3EAF3F; 
+}
