@@ -37,7 +37,7 @@ article {
 input,
 #login-button {
     width: 360px;
-    height: 42px;
+    height: 22px;
     margin: 5px;
 }
 
@@ -76,6 +76,7 @@ section {
 
 #login-button {
     left: calc(50% - 3604px / 2);
+    height: 30px;
 }
 
 label {
