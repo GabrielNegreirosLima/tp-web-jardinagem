@@ -1,3 +1,7 @@
+body {
+    background-color: rgba(137, 255, 137, 0.3);
+}
+
 #title {
     color: brown;
     text-align: center;
