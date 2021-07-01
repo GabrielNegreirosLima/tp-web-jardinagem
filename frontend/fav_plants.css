@@ -1,0 +1,27 @@
+
+#title {
+    color: brown;
+    text-align: center;
+}
+
+#public-share {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    background-color: lightsalmon;
+    border-radius: 5px;
+    width: 120px;
+    position: absolute;
+    right: 100px;
+    top: 50px;
+}
+
+#public-share:hover {
+    right: 101px;
+    top: 49px;
+    text-decoration: underline;
+}
+
+#public-share:active {
+    background-color: salmon;
+    color: rgb(76, 145, 76);
+}
