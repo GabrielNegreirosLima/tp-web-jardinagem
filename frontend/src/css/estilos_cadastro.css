@@ -8,7 +8,7 @@ body {
 body {
     margin: 0px;
     display: grid;
-    grid-template-rows: 70px 1fr 70px;
+    grid-template-rows: 70px 1fr 50px;
     grid-template-columns: auto;
     grid-template-areas: "header""main""footer";
     font-family: 'Verdana', sans-serif;
@@ -68,7 +68,7 @@ section {
     flex-wrap: wrap;
     justify-content: flex-end;
     height: 80px;
-    margin-top: 10px;
+    border: 1px solid red;
 }
 
 section {
