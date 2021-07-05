@@ -18,25 +18,39 @@
         <main id="principal">    
             <div id="pagina-planta">
                 <article id="detalhes-planta">
-                    <h1>Margarida</h1>
-                    <div id="avaliacao-planta">
-                        <p>notas</p>
-                    </div>
-                    <div id="fotos-planta">
+                    <h1>Margarida</h1>                   
+                    <section id="avaliacao-planta">
+                        <p>Facilidade de cuidar</p>
+                        <label for="quantidade-agua">Quantidade de água</label>
+                        <input id="quantidade-agua" type="range" min="0" max="100" step="1" disabled>
+                    </section>
+                    <section id="fotos-planta">                        
                         <img src="images/margarida.jpg" alt="Imagem de uma margarida branca">
-                        <p>mais fotos</p>
-                    </div>
-                    <p>descrição</p>                    
+                        <h2>Mais fotos da planta</h2>
+                        <p>fotos</p>                        
+                    </section>
+                    <section>
+                        <h2>Descrição da planta</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Imperdiet dui accumsan sit amet nulla facilisi morbi tempus. Diam volutpat commodo sed egestas egestas fringilla.
+                         </p>
+                    </section>                    
                                                        
                 </article>                
                 <section id="comentarios-planta">
-                    <p>comentario 1</p>
-                    <p>comentario 2</p>
-                    <p>comentario 3</p>
-                    <p>comentario 4</p>
+                    <h2>Todos os comentários</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>                    
                 </section>
                 <section id="avaliar-planta">
-                    <p>Avaliar planta</p>
+                    <h2>Avaliar planta</h2>
+                    <label for="comentario">Comentário</label> 
+                    <textarea name="comentario" id="comentario"></textarea>
+                    <p>Facilidade de cuidar</p>
+                    <label for="quantidade-agua">Quantidade de água</label>
+                    <input id="quantidade-agua" type="range" min="0" max="100" step="1">                                                                    
+                    <button id="enviar-avaliacao">Enviar avaliação</button>                    
                 </section>                
             </div>    
         </main>
