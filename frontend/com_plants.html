@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunidade de jardinagem</title>
+    <link rel="shortcut icon" href="images/lotus.png">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/com_plants.css">
+</head>
+
+<body>
+    <div class="container">
+        <header id="cabecalho">
+            <button id="toggle-sidebar">☰</button>
+            <div class="logo">
+                <img src="images/lotus.png" alt="Ícone da comunidade de jardinagem">
+                <h1>Comunidade de jardinagem</h1>
+            </div>
+            <nav>
+                <button class="botao-custom">
+                    <a href="index.html">Página Inicial</a>
+                </button>
+                <button class="botao-custom">
+                    <a href="">Perfil</a>
+                </button>
+                <button class="botao-custom">
+                    <a href="fav_plants.html">Plantas favoritas</a>
+                </button>
+                <button class="botao-custom">
+                    <a href="com_plants.html">Comentar planta</a>
+                </button>
+                </button>
+            </nav>
+        </header>
+        <aside id="barra-lateral">
+            <img src="images/icon-user.png" alt="Foto do usuário">
+            <button class="botao-custom botao-sidebar">
+                <a href="">Meu Perfil</a>
+            </button>
+            <button class="botao-custom botao-sidebar">
+                <a href="">Adicionar nova planta</a>
+            </button>
+            <button class="botao-custom botao-sidebar">
+                <a href="">Sair da conta</a>
+            </button>
+        </aside>
+        <main id="principal">
+            <div id="pagina-planta">
+                <article id="detalhes-planta">
+                    <h1>Margarida</h1>
+                    <section id="avaliacao-planta">
+                        <p>Facilidade de cuidar</p>
+                        <label for="quantidade-agua">Quantidade de água</label>
+                        <input id="quantidade-agua" type="range" min="0" max="100" step="1" disabled>
+                    </section>
+                    <section id="fotos-planta">
+                        <img src="images/margarida.jpg" alt="Imagem de uma margarida branca">
+                        <h2>Mais fotos da planta</h2>
+                        <p>fotos</p>
+                    </section>
+                    <section>
+                        <h2>Descrição da planta</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.
+                            Imperdiet dui accumsan sit amet nulla facilisi morbi tempus. Diam volutpat commodo sed
+                            egestas egestas fringilla.
+                        </p>
+                    </section>
+
+                </article>
+                <section id="comentarios-planta">
+                    <h2>Todos os comentários</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.</p>
+                </section>
+                <section id="avaliar-planta">
+                    <h2>Avaliar planta</h2>
+                    <label for="comentario">Comentário</label>
+                    <textarea name="comentario" id="comentario"></textarea>
+                    <p>Facilidade de cuidar</p>
+                    <label for="quantidade-agua">Quantidade de água</label>
+                    <input id="quantidade-agua" type="range" min="0" max="100" step="1">
+                    <button id="enviar-avaliacao">Enviar avaliação</button>
+                </section>
+            </div>
+        </main>
+        <footer id="rodape">
+            <div>
+                Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a>
+                from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>, and by <a
+                    href="https://www.klipartz.com title=" title="Klipartz">Klipartz</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="scripts.js"></script>
+
+</body>
+
+</html>
