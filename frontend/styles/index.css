@@ -7,7 +7,7 @@ html, body {
     min-height: 100vh;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto 90% auto;
+    grid-template-rows: 90px 90% auto;
     grid-template-areas: 
     "header"
     "main"
@@ -51,7 +51,7 @@ html, body {
     font-size: 18px;
 }
 
-.botao-header {
+.botao-custom {
     position: relative;
     padding: 10px;
     background-color: rgb(137, 255, 137);
@@ -59,7 +59,7 @@ html, body {
     border-radius: 30px;
 }
 
-.botao-header:hover{
+.botao-custom:hover{
     right: 1px;
     bottom: 1px;
 }
@@ -82,10 +82,14 @@ html, body {
 /* sidebar */
 
 #barra-lateral {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-around;
     grid-area: main;
     position: relative; 
-    left: -200px;
-    width: 200px; 
+    left: -250px;
+    width: 250px; 
     background-color: #A1FAAA;
     transition: all 200ms ease-out;     
 }
@@ -104,12 +108,39 @@ html, body {
 
 body.menu-visivel #barra-lateral {
     left: 0;
+    top: 0;
+    position: fixed;
+    height: 100%;
+    z-index: -1;
+}
+
+#barra-lateral img {
+    top: 50px;
+    visibility: hidden; 
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+}
+
+body.menu-visivel #barra-lateral img {
+    position: relative;
+    visibility: visible;
+}
+
+.botao-custom.botao-sidebar {
+    visibility: hidden;
+}
+
+body.menu-visivel .botao-custom.botao-sidebar {
+    visibility: visible;
 }
 
 /* Main */
 
 body.menu-visivel #principal {
-    left: 200px;
+    left: 250px;
     width: calc(100vw - 210px);
 }
 

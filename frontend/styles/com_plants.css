@@ -1,0 +1,51 @@
+#pagina-planta{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: 
+    "detalhes-planta comentarios-planta"
+    "detalhes-planta avaliar-planta"    
+}
+
+#detalhes-planta{
+    padding-left: 1em;
+    grid-area: detalhes-planta;    
+}
+
+#fotos-planta img{
+    max-width:400px;
+    max-height:400px;
+    width: auto;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#comentarios-planta{
+    grid-area: comentarios-planta;      
+    padding-left: 1em;
+}
+
+#comentarios-planta p{
+    border: 2px solid black;
+    padding: 1em;
+    border-radius: 15px;
+}
+
+#avaliacao-planta{
+    display: flex;
+    flex-direction: column;
+}
+
+#avaliar-planta{
+    display: flex;
+    flex-direction: column;
+    grid-area: avaliar-planta;   
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+#quantidade-agua{
+    margin-bottom: 1em;
+}
