@@ -10,6 +10,7 @@ legend {
 
 fieldset {
     display: flex;
+    gap: 20px;
     flex-flow: column nowrap;
     align-items: center;
     width: 600px;
@@ -24,3 +25,30 @@ input[type="radio"] {
     vertical-align: middle;
 }
   
+textarea {
+    display: block;
+    resize: none;
+    border: 1px solid black;
+}
+
+label, p {
+    font-weight: bold;
+}
+
+p > label {
+    font-weight: normal;
+}
+
+
+input[type="range"] {
+    vertical-align: middle;
+}
+
+.fa.fa-star {
+    filter: drop-shadow(2px 2px 2px black);
+    transition: all 200ms ease-out;
+}
+
+.checked { 
+    color: orange;
+}
