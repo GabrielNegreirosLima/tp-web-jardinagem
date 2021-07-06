@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>Comunidade de jardinagem</title>
+    <link rel="shortcut icon" href="images/lotus.png">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/add_plant.css">
+</head>
+
+<body>
+    <div class="container">
+        <header id="cabecalho">
+            <button id="toggle-sidebar">☰</button>
+            <div class="logo">
+                <img src="images/lotus.png" alt="Ícone da comunidade de jardinagem">
+                <h1>Comunidade de jardinagem</h1>
+            </div>
+            <nav>
+                <button class="botao-custom">
+                    <a href="index.html">Página Inicial</a>
+                </button>
+                <button class="botao-custom">
+                    <a href="">Perfil</a>
+                </button>
+                <button class="botao-custom">
+                    <a href="fav_plants.html">Plantas favoritas</a>
+                </button>
+            </nav>
+        </header>
+        <aside id="barra-lateral">
+            <img src="images/icon-user.png" alt="Foto do usuário">
+            <button class="botao-custom botao-sidebar">
+                <a href="">Meu Perfil</a>
+            </button>
+            <button class="botao-custom botao-sidebar">
+                <a href="">Adicionar nova planta</a>
+            </button>
+            <button class="botao-custom botao-sidebar">
+                <a href="">Sair da conta</a>
+            </button>
+        </aside>
+        <main id="principal">
+            <section>
+                <h1 id="title">Adicionar uma nova planta</h1>
+            </section>
+            <section>
+                <form action="/add_plant" method="post">
+                    <fieldset>
+                        <legend>Preencha os campus relativos a planta:</legend>
+                            <label>Nome:
+                                <input type="text" name="name">
+                            </label>
+                            <p>Escolha o tipo:
+                                <label>
+                                    <input type="radio" name="type" value="fruit">Frutíferas
+                                </label>
+                                <label>
+                                    <input type="radio" name="type" value="ornamental">Ornamentais
+                                </label>
+                                <label>
+                                    <input type="radio" name="type" value="flower">Flor
+                                </label>
+                            </p>
+                            <label>Selecione as imagens/fotos:
+                                <input type="file" id="imagem">
+                            </label>
+                        <button>Ok</button>
+                    </fieldset>
+                </form>
+            </section>
+        </main>
+        <footer id="rodape">
+            <div>
+                Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a>
+                from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>, and by <a
+                    href="https://www.klipartz.com title=" title="Klipartz">Klipartz</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="scripts.js"></script>
+
+</body>
+</html>

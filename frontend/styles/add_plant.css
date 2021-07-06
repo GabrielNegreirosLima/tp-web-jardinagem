@@ -1,0 +1,26 @@
+#title {
+    color: brown;
+    text-align: center;
+}
+
+legend {
+    padding-bottom: 20px;
+    text-decoration: 2px pink underline;
+}
+
+fieldset {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    width: 600px;
+    border: 2px solid #A1FAAA;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: lightpink;
+}
+
+input[type="radio"] {
+    margin-top: -1px;
+    vertical-align: middle;
+}
+  
