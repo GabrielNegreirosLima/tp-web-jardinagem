@@ -1,0 +1,54 @@
+#title {
+    color: brown;
+    text-align: center;
+}
+
+legend {
+    padding-bottom: 20px;
+    text-decoration: 2px pink underline;
+}
+
+fieldset {
+    display: flex;
+    gap: 20px;
+    flex-flow: column nowrap;
+    align-items: center;
+    width: 600px;
+    border: 2px solid #A1FAAA;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: lightpink;
+}
+
+input[type="radio"] {
+    margin-top: -1px;
+    vertical-align: middle;
+}
+  
+textarea {
+    display: block;
+    resize: none;
+    border: 1px solid black;
+}
+
+label, p {
+    font-weight: bold;
+}
+
+p > label {
+    font-weight: normal;
+}
+
+
+input[type="range"] {
+    vertical-align: middle;
+}
+
+.fa.fa-star {
+    filter: drop-shadow(2px 2px 2px black);
+    transition: all 200ms ease-out;
+}
+
+.checked { 
+    color: orange;
+}
