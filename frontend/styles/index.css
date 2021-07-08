@@ -1,6 +1,17 @@
+/* Geral */
+
 html, body {
+    --cor-header: #A1FAAA;
+    --cor-barra-lateral: #A1FAAA;
+    --cor-artigos: #A1FAAA;
+    --cor-rodape: #3EAF3F;
+    --cor-background: #FFF;
+    --cor-titulos: #000;
+    --cor-texto: #000;
+
     margin: 0px;
     min-height: 100vh;
+    color: var(--cor-texto);
 }
 
 .container{
@@ -14,6 +25,10 @@ html, body {
     "footer";
 }
 
+h1, h2, h3{
+    color: var(--cor-texto);
+}
+
 /* Header */
 
 #cabecalho {
@@ -23,7 +38,7 @@ html, body {
     align-items: center;
     position: sticky;
     top: 0;
-    background-color: #A1FAAA;    
+    background-color: var(--cor-header);    
     font-size: 15px;
     border-bottom: 3px solid #82d38b;
     padding: 10px;
@@ -90,7 +105,7 @@ html, body {
     position: relative; 
     left: -250px;
     width: 250px; 
-    background-color: #A1FAAA;
+    background-color: var(--cor-barra-lateral);
     transition: all 200ms ease-out;     
 }
 
@@ -154,6 +169,7 @@ body.menu-visivel {
     left: 0;
     transition: left 200ms ease-out;
     padding: 10px;
+    background-color: var(--cor-background);
 }
 
 .box-plantas{
@@ -167,7 +183,7 @@ body.menu-visivel {
     overflow: hidden;
     padding: 1em;    
     margin: 0.5em;
-    background-color: lightpink;
+    background-color: var(--cor-artigos);
     text-align: justify;
     width: 250px;
     height: 300px;
@@ -186,5 +202,5 @@ body.menu-visivel {
 #rodape{
     grid-area: footer;  
     padding: 10px;  
-    background-color: #3EAF3F; 
+    background-color: var(--cor-rodape); 
 }
