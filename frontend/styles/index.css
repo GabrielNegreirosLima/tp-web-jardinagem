@@ -1,6 +1,6 @@
 /* Geral */
 
-html, body {
+:root{
     --cor-header: #A1FAAA;
     --cor-barra-lateral: #A1FAAA;
     --cor-artigos: #A1FAAA;
@@ -8,6 +8,11 @@ html, body {
     --cor-background: #FFF;
     --cor-titulos: #000;
     --cor-texto: #000;
+    --cor-botao-custom: rgb(137, 255, 137);
+    --cor-texto-botao-custom: #000;
+}
+
+html, body {   
 
     margin: 0px;
     min-height: 100vh;
@@ -39,8 +44,7 @@ h1, h2, h3{
     position: sticky;
     top: 0;
     background-color: var(--cor-header);    
-    font-size: 15px;
-    border-bottom: 3px solid #82d38b;
+    font-size: 15px;    
     padding: 10px;
     z-index: 999;
 }
@@ -69,9 +73,13 @@ h1, h2, h3{
 .botao-custom {
     position: relative;
     padding: 10px;
-    background-color: rgb(137, 255, 137);
+    background-color: var(--cor-botao-custom);
     border: 1px solid darkgreen;
     border-radius: 30px;
+}
+
+.botao-custom a{
+    color: var(--cor-texto-botao-custom);
 }
 
 .botao-custom:hover{
@@ -204,3 +212,18 @@ body.menu-visivel {
     padding: 10px;  
     background-color: var(--cor-rodape); 
 }
+
+/* Dark mode */
+
+@media (prefers-color-scheme: dark) {
+    :root{
+        --cor-header: #3EAF3F;
+        --cor-barra-lateral: #3EAF3F;
+        --cor-artigos: #3EAF3F;
+        --cor-rodape: #216221;
+        --cor-background: #203522;
+        --cor-titulos: #FFF;
+        --cor-texto: #FFF;
+        --cor-texto-botao-custom: #000;
+    }
+  }
