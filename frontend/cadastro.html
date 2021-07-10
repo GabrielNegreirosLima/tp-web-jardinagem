@@ -17,54 +17,51 @@
 
     </header>
     <main>
-
-        </header>
-        <main>
-            <section>
-                <article>
-                    <div id="cabecalho-article">
-                        <img id="login-img" src="images/icon-login.png" alt="Símbolo de um boneco que representa o usuário">
-                        <h1>Cadastre-se</h1>
-                    </div>
-                    <label for="login-input" id="login-input-lbl">e-mail:
+        <section>
+            <div id="cabecalho-section">
+                <img id="login-img" src="images/icon-login.png" alt="Símbolo de um boneco que representa o usuário">
+                <h1>Cadastre-se</h1>
+            </div>
+            <form action="">
+                <label for="login-input" id="login-input-lbl">e-mail:
                     </label>
-                    <input id="login-input" type="email" placeholder="Ex: luanasilva@gmail.com">
+                <input name="email" id="login-input" type="email" placeholder="Ex: luanasilva@gmail.com" required>
 
-                    <label for="password-input" id="password-input-lbl">senha:
+                <label for="password-input" id="password-input-lbl">senha:
                     </label>
-                    <input id="password-input" type="password">
+                <input name="password" id="password-input" type="password" minlength="8" required>
 
-                    <label for="nome-input" id="nome-input-lbl">seu nome e
+                <label for="nome-input" id="nome-input-lbl">seu nome e
                         sobrenome: </label>
-                    <input id="nome-input" type="text" placeholder="Ex: José Messias">
+                <input name="name" id="nome-input" type="text" placeholder="Ex: José Messias" required>
 
-                    <label for="data-nascimento-input" id="data-nascimento-input-lbl">data de nascimento:
+                <label for="data-nascimento-input" id="data-nascimento-input-lbl">data de nascimento:
                     </label>
-                    <input id="data-nascimento-input" type="date">
-                    <div id="radio-div"> <label id="radio-lbl-feminino">
-                            <input type="radio"
-                                   name="cor"
+                <input name="birth-date" id="data-nascimento-input" type="date" required>
+                <div id="radio-div"> <label id="radio-lbl-feminino">
+                            <input name="gender"
+                                   type="radio"
                                    value="feminino"
-                                   class="radio-btn">Feminino
+                                   class="radio-btn"
+                                   required>Feminino
                         </label>
-                        <label id="radio-lbl-masculino">
-                            <input type="radio"
-                                   name="cor"
+                    <label id="radio-lbl-masculino">
+                            <input name="gender"
+                                   type="radio"
                                    value="masculino"
-                                   class="radio-btn">Masculino
-                        </label></div>
-                    <label for="phone" id="login-phone-lbl">telefone:
+                                   class="radio-btn"
+                                   checked>Masculino
+                        </label>
+                </div>
+                <label for="phone" id="login-phone-lbl">telefone:
                     </label>
-                    <input type="tel" id="phone" name="phone" placeholder="Ex:(99) 9999-9999">
-
-                    <label for="register-button" id="register-button-lbl">
-                    </label>
-                    <button id="register-button">continuar</button>
+                <input name="phone" type="tel" id="phone" placeholder="Ex:(99) 9999-9999" pattern="\([0-9]{2}\)[0-9]{5}-[0-9]{4}" required>
+                <button type="submit" id="register-button">continuar</button>
+            </form>
 
 
-                </article>
-            </section>
-        </main>
+        </section>
+    </main>
 </body>
 
 </html>
