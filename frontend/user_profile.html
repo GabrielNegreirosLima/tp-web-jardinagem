@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="color-scheme" content="light dark">
+    <title>Comunidade de jardinagem</title>
+    <link rel="shortcut icon" href="images/lotus.png">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/user_profile.css">
+</head>
+
+<body>
+    <div class="container">
+        <header id="cabecalho">
+            <button id="toggle-sidebar">☰</button>
+            <div class="logo">
+                <img src="images/lotus.png" alt="Ícone da comunidade de jardinagem">
+                <h1>Comunidade de jardinagem</h1>
+            </div>
+            <nav>
+                <button class="botao-custom">
+                    <a href="index.html">Página Inicial</a>
+                </button>
+                <button class="botao-custom">
+                    <a href="">Perfil</a>
+                </button>
+                <button class="botao-custom">
+                    <a href="fav_plants.html">Plantas favoritas</a>
+                </button>
+            </nav>
+        </header>
+        <aside id="barra-lateral">
+            <img src="images/icon-user.png" alt="Foto do usuário">
+            <button class="botao-custom botao-sidebar">
+                <a href="">Meu Perfil</a>
+            </button>
+            <button class="botao-custom botao-sidebar">
+                <a href="">Adicionar nova planta</a>
+            </button>
+            <button class="botao-custom botao-sidebar">
+                <a href="">Sair da conta</a>
+            </button>
+        </aside>
+        <main id="principal">
+            <section>
+                <h1 id="title">Perfil do Usuário</h1>
+                <img src="images/icon-user.png" alt="Foto do usuário">
+            </section>
+            <section>
+                <button class="botao-custom">Editar Perfil</button>
+                <form action="/add_plant" method="post">
+                    <fieldset>
+                        <label>Nome e sobrenome: 
+                            <input type="text" name="name" value="José da Silva" required disabled>
+                        </label>
+                        <label>Seu email:
+                            <input type="email" required disabled>
+                        </label>
+                        <label>Data de nascimento: 
+                            <input type="date" id="data-de-nascimento" name="data-de-nascimento" max="2021-1-1" value="1997-1-1" required disabled>
+                        </label>
+                        <p>Gênero:
+                            <label>
+                                <input type="radio" name="gender" value="feminino"  required disabled>Feminino
+                                <input type="radio" name="gender" value="masculino" required  checked disabled>Masculino
+                                <input type="radio" name="gender" value="outro" required disabled>Outros
+                            </label>           
+                        </p>
+                        <label>Telefone
+                            <input type="tel" name="phone" id="phone" value="(31) 99999-9999" required disabled>
+                        </label>
+                        <button class="botao-custom" id="save-profile">Salvar</button>
+                    </fieldset>
+                </form>
+            </section>
+        </main>
+        <footer id="rodape">
+            <div>
+                Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a>
+                from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>, and by <a
+                    href="https://www.klipartz.com title=" title="Klipartz">Klipartz</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="scripts.js"></script>
+
+</body>
+</html>
