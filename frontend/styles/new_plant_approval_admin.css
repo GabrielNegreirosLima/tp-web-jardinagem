@@ -255,3 +255,12 @@
         height: 30px;
         margin-top: 7px;
     }
+    
+    .fa.fa-star {
+        filter: drop-shadow(2px 2px 2px var(--cor-text));
+        transition: all 200ms ease-out;
+    }
+    
+    .checked {
+        color: orange;
+    }
