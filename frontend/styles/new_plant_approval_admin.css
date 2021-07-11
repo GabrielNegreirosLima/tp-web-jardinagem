@@ -7,9 +7,12 @@
     --cor-rodape: #3EAF3F;
     --cor-background: #FFF;
     --cor-titulos: #000;
-    --cor-texto: #000;
+    --cor-texto-esq: #000;
+    --cor-texto-dir: white;
     --cor-botao-custom: rgb(137, 255, 137);
     --cor-texto-botao-custom: #000;
+    --cor-background-dir: #203522;
+    --cor-borda-section-esq: white;
 }
 
 html,
@@ -33,11 +36,9 @@ body {
 
 header {
     grid-area: header;
-    border: 1px solid pink;
 }
 
 main {
-    border: 1px solid green;
     grid-area: main;
     display: grid;
     grid-template-rows: 1fr;
@@ -46,12 +47,17 @@ main {
 }
 
 #section-one {
-    border: 1px solid red;
     grid-area: section-one;
+    width: auto;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--cor-background-dir);
+    color: var(--cor-texto-dir);
+    text-align: center;
 }
 
 #section-two {
-    border: 1px solid blue;
     grid-area: section-two;
 }
 
@@ -66,8 +72,11 @@ main {
 }
 
 .img-inseridas {
-    max-width: 100px;
-    max-height: 100px;
+    max-width: 150px;
+    max-height: 150px;
+    align-self: flex-start;
+    position: relative;
+    left: -30px;
 }
 
 #img-descricao {
@@ -83,4 +92,52 @@ main {
 .img-mais-plantas {
     max-width: 100px;
     max-height: 100px;
+}
+
+.div-novas-plantas {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    border: 1px solid var(--cor-borda-section-esq);
+}
+
+.div-novas-plantas>p {
+    margin-left: -50px;
+    margin-right: 2px;
+    width: 80%;
+}
+
+.div-novas-plantas,
+form {
+    margin-bottom: 10px;
+}
+
+#section-one>article {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 100%;
+    max-height: 26%;
+    text-align: left;
+}
+
+#section-one form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-left: -10px;
+    width: 19%;
+    justify-content: center;
+}
+
+button {
+    background-color: var(--cor-botao-custom);
+    border-radius: 30px;
+}
+
+#section-one form>button {
+    height: 30px;
+    width: 80px;
+    margin-top: 5px;
 }
