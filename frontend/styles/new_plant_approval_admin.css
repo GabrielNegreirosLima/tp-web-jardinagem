@@ -16,7 +16,6 @@ html,
 body {
     margin: 0px;
     min-height: 100vh;
-    width: 100%;
     color: var(--cor-texto);
     overflow-x: auto;
     overflow-y: auto;
@@ -54,4 +53,34 @@ main {
 #section-two {
     border: 1px solid blue;
     grid-area: section-two;
+}
+
+.img-inseridas,
+.estrela,
+.img-mais-plantas,
+#img-descricao {
+    width: auto;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img-inseridas {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+#img-descricao {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.estrela {
+    max-width: 20px;
+    max-height: 20px;
+}
+
+.img-mais-plantas {
+    max-width: 100px;
+    max-height: 100px;
 }

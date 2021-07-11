@@ -18,7 +18,7 @@
             <h1>Aprovação de solitações para incluir novas plantas</h1>
             <article>
                 <figure>
-                    <img src="images/margarida.jpg" alt="Uma margarida cor branca">
+                    <img class="img-inseridas" src="images/margarida.jpg" alt="Uma margarida cor branca">
                     <figcaption>"Uma margarida cor branca"</figcaption>
                 </figure>
                 <p>
@@ -34,15 +34,15 @@
         <section id="section-two">
             <div>
                 <h2>Edição</h2>
-                <form>
+                <form id="form-pesquisa">
                     <input id="search-input" type="search" name="search-plants">
                     <button type="submit">buscar</button>
                 </form>
             </div>
-            <article>
+            <article id="descricao">
                 <h1>Margarida</h1>
                 <figure>
-                    <img src="images/margarida.jpg" alt="Uma margarida cor branca">
+                    <img id="img-descricao" src="images/margarida.jpg" alt="Uma margarida cor branca">
                     <figcaption>"Uma margarida cor branca"</figcaption>
                 </figure>
                 <p>
@@ -50,31 +50,29 @@
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
             </article>
-            <article>
+            <article id="facilidade-cuidado">
                 <div>
-                    <img src="images/star_on.png" alt="Uma estrela amarela">
-                    <img src="images/star_on.png" alt="Uma estrela amarela">
-                    <img src="images/star_on.png" alt="Uma estrela amarela">
-                    <img src="images/star_on.png" alt="Uma estrela amarela">
-                    <img src="images/star_on.png" alt="Uma estrela amarela">
+                    <img class="estrela" src="images/star_on.png" alt="Uma estrela amarela">
+                    <img class="estrela" src="images/star_on.png" alt="Uma estrela amarela">
+                    <img class="estrela" src="images/star_on.png" alt="Uma estrela amarela">
+                    <img class="estrela" src="images/star_on.png" alt="Uma estrela amarela">
+                    <img class="estrela" src="images/star_on.png" alt="Uma estrela amarela">
                 </div>
                 <h1>Facilidade de cuidar</h1>
             </article>
-            <article>
-                <input type="range" min="0" max="100" step="10">
+            <article id="consumo-agua">
+                <input name="consumo-agua" type="range" min="0" max="100" step="10">
             </article>
-            <article>
+            <article id="mais-fotos-planta">
                 <h1>Mais fotos de Margarida</h1>
                 <section>
-                    <img src="images/marguerite.jpg" alt="Uma margarida rosa">
+                    <img class="img-mais-plantas" src="images/marguerite_yellow.jpg" alt="Uma margarida amarela">
                 </section>
             </article>
-            <form>
+            <form id="form-salvar-edicao">
                 <button type="submit">Salvar edição</button>
             </form>
         </section>
-
-
     </main>
 
 </body>
