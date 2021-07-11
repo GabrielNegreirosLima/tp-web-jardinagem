@@ -197,6 +197,11 @@ body.menu-visivel {
     height: 300px;
 }
 
+.post-plantas a{
+    text-decoration: none;
+    color: var(--cor-texto);
+}
+
 .foto-planta {
     display: block;
     margin-left: auto;
