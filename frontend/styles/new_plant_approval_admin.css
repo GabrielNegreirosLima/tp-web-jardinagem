@@ -12,7 +12,8 @@
         --cor-botao-custom: rgb(137, 255, 137);
         --cor-texto-botao-custom: #000;
         --cor-background-dir: #203522;
-        --cor-borda-section-esq: white;
+        --cor-borda-section-esq: A1E29F;
+        --cor-section-esq: rgb(161, 226, 159, 100%);
     }
     
     html,
@@ -35,6 +36,26 @@
     
     header {
         grid-area: header;
+        background-image: linear-gradient(0deg, rgba(26, 211, 58, 255), rgba(173, 204, 251, 255));
+        background-image: url('../images/marguerite.jpg');
+        background-repeat: repeat-x;
+        background-size: 40%;
+    }
+    
+    #login-img-nav {
+        width: 4%;
+        height: auto;
+        padding-right: 5px;
+        margin-left: 50px;
+        margin-top: 10px;
+    }
+    
+    #texto-icone-voltar {
+        color: white;
+        font-family: sans-serif;
+        font-size: x-large;
+        font-weight: bold;
+        text-shadow: 2px 2px 4px #000000
     }
     
     main {
@@ -47,10 +68,10 @@
     
     #section-one {
         grid-area: section-one;
-        width: auto;
+        width: 100%;
         height: auto;
         margin-left: auto;
-        margin-right: auto;
+        margin-right: 0px;
         background-color: var(--cor-background-dir);
         color: var(--cor-texto-dir);
         text-align: center;
@@ -58,6 +79,13 @@
     
     #section-two {
         grid-area: section-two;
+        background-color: var(--cor-section-esq);
+        margin-left: 0px;
+        width: 100%;
+    }
+    
+    #section-two>* {
+        margin-left: 8px;
     }
     
     .img-inseridas,
@@ -87,6 +115,7 @@
         max-width: 30px;
         max-height: 30px;
         margin-left: 11px;
+        box-shadow: 0 0.5em 0.6em -0.7em;
     }
     
     .img-mais-plantas {
@@ -120,7 +149,10 @@
         max-width: 100%;
         max-height: 26%;
         text-align: left;
-        margin-left: 7px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 10px;
+        border: 1px solid var(--cor-texto-dir);
     }
     
     #section-one form {
@@ -137,14 +169,21 @@
         border-radius: 30px;
     }
     
+    #form-pesquisa>button {
+        width: 100px;
+        height: 30px;
+    }
+    
+    input {
+        border-radius: 10px;
+        width: 300px;
+        height: 30px;
+    }
+    
     #section-one form>button {
         height: 30px;
         width: 80px;
         margin-top: 5px;
-    }
-    
-    #section-two {
-        margin-left: 5px;
     }
     
     #section-two>#article-descricao {
@@ -158,18 +197,13 @@
         text-align: center;
     }
     
-    #section-two #div-edicao {
-        border: 1px solid rgb(234, 0, 255);
-    }
-    
     #section-two #div-descricao-txt>h1 {
         text-align: center;
-        border: 1px solid red;
     }
     
     #section-two #div-descricao-txt {
         text-align: left;
-        border: 1px solid red;
+        margin-right: 5%;
     }
     
     #section-two #article-facilidade-cuidado {
@@ -177,17 +211,14 @@
         flex-wrap: nowrap;
         width: 100%;
         justify-content: flex-start;
-        border: 1px solid red;
     }
     
     #div-estrelas {
         padding-top: 10px;
-        border: 1px solid pink;
     }
     
     #h-facilidade-cuidar {
         margin-left: 5px;
-        border: 1px solid red;
     }
     
     #section-two>#article-consumo-agua {
@@ -195,24 +226,23 @@
         flex-wrap: nowrap;
         width: 100%;
         justify-content: flex-start;
-        border: 1px solid yellowgreen;
     }
     
     #article-consumo-agua>#input-consumo-agua {
-        border: 1px solid rgb(255, 0, 234);
         width: 27%;
+        margin-top: 11px;
     }
     
     #article-consumo-agua>label {
-        border: 1px solid rgb(0, 4, 255);
         margin-left: 5px;
     }
     
     .article-mais-fotos-planta {
-        border: 1px solid rgb(0, 4, 255);
+        border: 1px solid cor-texto-dir;
         margin-left: 10px;
         margin-bottom: 5px;
-        width: 80%;
+        width: 95%;
+        border: 1px solid var(--cor-background);
     }
     
     .article-mais-fotos-planta>img {
@@ -223,4 +253,5 @@
     #form-salvar-edicao>button {
         width: 150px;
         height: 30px;
+        margin-top: 7px;
     }
