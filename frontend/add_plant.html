@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="utf-8">
     <meta name="color-scheme" content="light dark">
@@ -8,7 +9,7 @@
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/add_plant.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="scripts/add_plant.js" defer></script>
+    <script src="scripts/stars_rating.js" defer></script>
 </head>
 
 <body>
@@ -51,36 +52,36 @@
                 <form action="/add_plant" method="post">
                     <fieldset>
                         <legend>Preencha os campus relativos a planta:</legend>
-                            <label>Nome:
-                                <input type="text" name="name" required>
+                        <label>Nome:
+                            <input type="text" name="name" required>
+                        </label>
+                        <p>Escolha o tipo:
+                            <label>
+                                <input type="radio" name="type" value="fruit" required>Frutíferas
                             </label>
-                            <p>Escolha o tipo:
-                                <label>
-                                    <input type="radio" name="type" value="fruit" required>Frutíferas
-                                </label>
-                                <label>
-                                    <input type="radio" name="type" value="ornamental" required>Ornamentais
-                                </label>
-                                <label>
-                                    <input type="radio" name="type" value="flower" required>Flor
-                                </label>
-                            </p>
-                            <label>Selecione as imagens/fotos:
-                                <input type="file" id="imagem" required> 
+                            <label>
+                                <input type="radio" name="type" value="ornamental" required>Ornamentais
                             </label>
-                            <label>Descrição da planta: 
-                                <textarea name="descricao" id="descricao" cols="50" rows="5" required></textarea>
+                            <label>
+                                <input type="radio" name="type" value="flower" required>Flor
                             </label>
-                            <label>Facilidade de cuidar:
-                                <span id="star1" class="fa fa-star checked"></span>
-                                <span id="star2" class="fa fa-star"></span>
-                                <span id="star3" class="fa fa-star"></span>
-                                <span id="star4" class="fa fa-star"></span>
-                                <span id="star5" class="fa fa-star"></span>
-                            </label>
-                            <label>Quantidade de água necessária:
-                                <input id="quantidade-agua" type="range" min="0" max="100" step="1">
-                            </label>                            
+                        </p>
+                        <label>Selecione as imagens/fotos:
+                            <input type="file" id="imagem" required>
+                        </label>
+                        <label>Descrição da planta:
+                            <textarea name="descricao" id="descricao" cols="50" rows="5" required></textarea>
+                        </label>
+                        <label>Facilidade de cuidar:
+                            <button type="button" class="star1 fa fa-star checked"></button>
+                            <button type="button" class="star2 fa fa-star "></button>
+                            <button type="button" class="star3 fa fa-star "></button>
+                            <button type="button" class="star4 fa fa-star"></button>
+                            <button type="button" class="star5 fa fa-star"></button>
+                        </label>
+                        <label>Quantidade de água necessária:
+                            <input id="quantidade-agua" type="range" min="0" max="100" step="1">
+                        </label>
                         <button type="reset" class="botao-custom botao-exclude">Limpar formulário</button>
                         <button type="submit" class="botao-custom">Adicionar</button>
                     </fieldset>
@@ -96,7 +97,8 @@
         </footer>
     </div>
 
-    <script src="scripts.js"></script>
+    <script src="scripts/sidebar.js"></script>
 
 </body>
+
 </html>
