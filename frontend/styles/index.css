@@ -143,7 +143,7 @@ body.menu-visivel #barra-lateral {
     top: 0;
     position: fixed;
     height: 100%;
-    z-index: -1;
+    z-index: 0;
 }
 
 #barra-lateral img {
