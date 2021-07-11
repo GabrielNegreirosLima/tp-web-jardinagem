@@ -54,12 +54,19 @@ h3 {
     flex-direction: column;
 }
 
-#avaliar-planta{
+form {
     display: flex;
     flex-direction: column;
     grid-area: avaliar-planta;   
     padding-left: 1em;
     padding-right: 1em;
+    justify-content: space-between;
+}
+
+#enviar-avaliacao {
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #quantidade-agua{
