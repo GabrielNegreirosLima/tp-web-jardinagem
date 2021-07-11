@@ -27,7 +27,7 @@
                     <a href="index.html">Página Inicial</a>
                 </button>
                 <button class="botao-custom">
-                    <a href="">Perfil</a>
+                    <a href="user_profile.html">Perfil</a>
                 </button>
                 <button class="botao-custom">
                     <a href="fav_plants.html">Plantas favoritas</a>
@@ -68,26 +68,42 @@
                     <section id="fotos-planta">
                         <img src="images/margarida.jpg" alt="Imagem de uma margarida branca">
                         <h2>Mais fotos da planta</h2>
-                        <p>fotos</p>
+                        <article>
+                            <img class="more-photos" src="images/margarida-2.jpg" alt="Mais uma foto de margarida branca">
+                        </article>
                     </section>
                     <section>
                         <h2>Descrição da planta</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.
-                            Imperdiet dui accumsan sit amet nulla facilisi morbi tempus. Diam volutpat commodo sed
-                            egestas egestas fringilla.
+                        <p>
+                            é o nome popular comum a uma grande variedade de plantas (e flor respectiva, ou melhor, 
+                            a sua inflorescência). Na verdade, não existe grande concordância entre os autores quanto 
+                            à utilização deste nome, que apresenta muitas variantes. Há mesmo aqueles que designam de 
+                            "margarida" qualquer planta da família das Compostas. Além do mais, esta designação é por 
+                            vezes apresentada como sinónimo de bem-me-quer, malmequer, bonina, etc, que por sua vez, 
+                            são também nomes utilizadas para espécies diversas que nem sempre coincidem. 
                         </p>
                     </section>
-
                 </article>
                 <section id="comentarios-planta">
                     <h2>Todos os comentários</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.</p>
+                    <article>
+                        <h3 class="username-comment">
+                            Joana
+                        </h3>
+                        Ótima planta, muito bonitinha.
+                    </article>
+                    <article>
+                        <h3 class="username-comment">
+                            Andréia
+                        </h3>
+                        Todas as minhas morreram :(
+                    </article>
+                    <article>
+                        <h3 class="username-comment">
+                            João
+                        </h3>
+                        Acabei de tirar 4 mudas, alguém quer? :D
+                    </article>
                 </section>
                 <section id="avaliar-planta">
                     <h2>Avaliar planta</h2>
@@ -105,6 +121,7 @@
                         <input id="quantidade-agua" type="range" min="0" max="100" step="1" required>
                         <button type="submit" id="enviar-avaliacao" class="botao-custom">Enviar avaliação</button>
                     </form>
+
                 </section>
             </div>
         </main>
