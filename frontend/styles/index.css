@@ -101,13 +101,17 @@ h1, h2, h3{
 .banner{   
     border: 5px solid black;
     margin-left: auto;
-    margin-right: auto;
-    width: 500px;    
+    margin-right: auto;    
+    background-image: url('../images/banner.png');
+    
 }
 
 .banner h1{
-    font-size: 30px;
-    text-align: center;
+    font-size: 36px;
+    font-family: sans-serif;
+    color:black;
+    text-align: center;    
+    text-shadow: -2px 2px white, 2px 2px white, 2px -2px white, -2px -2px white;
 }
 
 
