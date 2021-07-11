@@ -10,7 +10,6 @@ stars.forEach( el => {
 });
 
 function starsChecker(starEl){
-    console.log(starEl.classList[0][4]);
     const currentStarIdNumber = starEl.classList[0][4];
     const numberOfStars = 5;
     let previousStar;
