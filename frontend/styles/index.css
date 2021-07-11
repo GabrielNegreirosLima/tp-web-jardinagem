@@ -10,6 +10,7 @@
     --cor-texto: #000;
     --cor-botao-custom: rgb(137, 255, 137);
     --cor-texto-botao-custom: #000;
+    --cor-botao-exclude: rgb(255, 93, 93);
 }
 
 html, body {   
@@ -87,6 +88,14 @@ h1, h2, h3{
     bottom: 1px;
 }
 
+.botao-exclude {
+    position: relative;
+    padding: 10px;
+    background-color: var(--cor-botao-exclude);
+    border: 1px solid darkgreen;
+    border-radius: 30px;
+}
+
 /* banner */
 
 .banner{   
@@ -134,7 +143,7 @@ body.menu-visivel #barra-lateral {
     top: 0;
     position: fixed;
     height: 100%;
-    z-index: -1;
+    z-index: 0;
 }
 
 #barra-lateral img {
@@ -186,6 +195,8 @@ body.menu-visivel {
     justify-content: center;    
 }
 
+/* Article */
+
 .post-plantas{    
     text-overflow: ellipsis;
     overflow: hidden;
@@ -197,12 +208,34 @@ body.menu-visivel {
     height: 300px;
 }
 
+.post-plantas a{
+    text-decoration: none;
+    color: var(--cor-texto);
+}
+
 .foto-planta {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 100px;
     height: 100px;
+}
+
+/* Stars */
+
+button.fa{
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.fa.fa-star {
+    filter: drop-shadow(2px 2px 2px var(--cor-text));
+    transition: all 200ms ease-out;
+}
+
+.checked { 
+    color: orange;
 }
 
 /* Footer */

@@ -1,0 +1,55 @@
+#title {
+    text-align: center;
+}
+
+button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+section img {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+fieldset {
+    display: flex;
+    gap: 20px;
+    flex-flow: column nowrap;
+    align-items: center;
+    width: 600px;
+    border: 2px solid #A1FAAA;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: lightpink;
+}
+
+input[type="text"] {
+    border-radius: 4px;
+}
+
+input:disabled {
+    background-color: lightgrey;
+    color: black;
+    text-align: center;
+}
+
+input[type="radio"] {
+    margin-top: -1px;
+    vertical-align: middle;
+}
+
+button {
+    display: block;
+}
+
+button:disabled {
+    opacity: 0.5;
+}

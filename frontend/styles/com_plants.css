@@ -27,10 +27,26 @@
     padding-left: 1em;
 }
 
-#comentarios-planta p{
+#comentarios-planta article{
     border: 2px solid black;
     padding: 1em;
     border-radius: 15px;
+    margin-bottom: 5px;
+}
+
+article p {
+    text-align: justify;
+}
+
+h3 {
+    display: inline;
+}
+
+
+#enviar-avaliacao {
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #avaliacao-planta{
@@ -38,12 +54,19 @@
     flex-direction: column;
 }
 
-#avaliar-planta{
+form {
     display: flex;
     flex-direction: column;
     grid-area: avaliar-planta;   
     padding-left: 1em;
     padding-right: 1em;
+    justify-content: space-between;
+}
+
+#enviar-avaliacao {
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #quantidade-agua{

@@ -1,11 +1,19 @@
+:root{
+    --cor-legenda-underline: pink;
+    --cor-background-fieldset: lightpink;
+    --cor-border-fieldset: var(--cor-header);       /*Include into index.css*/
+    --cor-text: black;
+    --cor-title: brown;
+}
+
 #title {
-    color: brown;
+    color: var(--cor-title);
     text-align: center;
 }
 
 legend {
     padding-bottom: 20px;
-    text-decoration: 2px pink underline;
+    text-decoration: 2px var(--cor-legenda-underline) underline;
 }
 
 fieldset {
@@ -14,10 +22,10 @@ fieldset {
     flex-flow: column nowrap;
     align-items: center;
     width: 600px;
-    border: 2px solid #A1FAAA;
+    border: 2px solid var(--cor-header);
     margin-left: auto;
     margin-right: auto;
-    background-color: lightpink;
+    background-color: var(--cor-background-fieldset);
 }
 
 input[type="radio"] {
@@ -28,11 +36,12 @@ input[type="radio"] {
 textarea {
     display: block;
     resize: none;
-    border: 1px solid black;
+    border: 1px solid var(--cor-text);
 }
 
 label, p {
     font-weight: bold;
+    color: var(--cor-text);
 }
 
 p > label {
@@ -44,11 +53,12 @@ input[type="range"] {
     vertical-align: middle;
 }
 
-.fa.fa-star {
-    filter: drop-shadow(2px 2px 2px black);
-    transition: all 200ms ease-out;
-}
+/* Dark mode */
 
-.checked { 
-    color: orange;
-}
+@media (prefers-color-scheme: dark) {
+    :root{
+        --cor-title: white;
+        --cor-background-fieldset: salmon;
+        --cor-legenda-underline: orange;
+    }
+  }

@@ -10,6 +10,8 @@
     <link rel="shortcut icon" href="images/lotus.png">
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/com_plants.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="scripts/stars_rating.js" defer></script>
 </head>
 
 <body>
@@ -25,7 +27,7 @@
                     <a href="index.html">Página Inicial</a>
                 </button>
                 <button class="botao-custom">
-                    <a href="">Perfil</a>
+                    <a href="user_profile.html">Perfil</a>
                 </button>
                 <button class="botao-custom">
                     <a href="fav_plants.html">Plantas favoritas</a>
@@ -42,7 +44,7 @@
                 <a href="">Meu Perfil</a>
             </button>
             <button class="botao-custom botao-sidebar">
-                <a href="">Adicionar nova planta</a>
+                <a href="add_plant.html">Adicionar nova planta</a>
             </button>
             <button class="botao-custom botao-sidebar">
                 <a href="">Sair da conta</a>
@@ -53,42 +55,73 @@
                 <article id="detalhes-planta">
                     <h1>Margarida</h1>
                     <section id="avaliacao-planta">
-                        <p>Facilidade de cuidar</p>
+                        <label>Facilidade de cuidar:
+                            <button class="star1 fa fa-star checked" disabled></button>
+                            <button class="star2 fa fa-star checked" disabled></button>
+                            <button class="star3 fa fa-star" disabled></button>
+                            <button class="star4 fa fa-star" disabled></button>
+                            <button class="star5 fa fa-star" disabled></button>
+                        </label>
                         <label for="quantidade-agua">Quantidade de água</label>
                         <input id="quantidade-agua" type="range" min="0" max="100" step="1" disabled>
                     </section>
                     <section id="fotos-planta">
                         <img src="images/margarida.jpg" alt="Imagem de uma margarida branca">
                         <h2>Mais fotos da planta</h2>
-                        <p>fotos</p>
+                        <article>
+                            <img class="more-photos" src="images/margarida-2.jpg" alt="Mais uma foto de margarida branca">
+                        </article>
                     </section>
                     <section>
                         <h2>Descrição da planta</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.
-                            Imperdiet dui accumsan sit amet nulla facilisi morbi tempus. Diam volutpat commodo sed
-                            egestas egestas fringilla.
+                        <p>
+                            é o nome popular comum a uma grande variedade de plantas (e flor respectiva, ou melhor, 
+                            a sua inflorescência). Na verdade, não existe grande concordância entre os autores quanto 
+                            à utilização deste nome, que apresenta muitas variantes. Há mesmo aqueles que designam de 
+                            "margarida" qualquer planta da família das Compostas. Além do mais, esta designação é por 
+                            vezes apresentada como sinónimo de bem-me-quer, malmequer, bonina, etc, que por sua vez, 
+                            são também nomes utilizadas para espécies diversas que nem sempre coincidem. 
                         </p>
                     </section>
-
                 </article>
                 <section id="comentarios-planta">
                     <h2>Todos os comentários</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.</p>
+                    <article>
+                        <h3 class="username-comment">
+                            Joana
+                        </h3>
+                        Ótima planta, muito bonitinha.
+                    </article>
+                    <article>
+                        <h3 class="username-comment">
+                            Andréia
+                        </h3>
+                        Todas as minhas morreram :(
+                    </article>
+                    <article>
+                        <h3 class="username-comment">
+                            João
+                        </h3>
+                        Acabei de tirar 4 mudas, alguém quer? :D
+                    </article>
                 </section>
                 <section id="avaliar-planta">
                     <h2>Avaliar planta</h2>
-                    <label for="comentario">Comentário</label>
-                    <textarea name="comentario" id="comentario"></textarea>
-                    <p>Facilidade de cuidar</p>
-                    <label for="quantidade-agua">Quantidade de água</label>
-                    <input id="quantidade-agua" type="range" min="0" max="100" step="1">
-                    <button id="enviar-avaliacao">Enviar avaliação</button>
+                    <form action="com_plants.html" method="post">
+                        <label for="comentario">Comentário</label>
+                        <textarea name="comentario" id="comentario" required></textarea>
+                        <label>Facilidade de cuidar:
+                            <button type="button" class="star1 fa fa-star checked"></button>
+                            <button type="button" class="star2 fa fa-star checked"></button>
+                            <button type="button" class="star3 fa fa-star "></button>
+                            <button type="button" class="star4 fa fa-star"></button>
+                            <button type="button" class="star5 fa fa-star"></button>
+                        </label>
+                        <label for="quantidade-agua">Quantidade de água</label>
+                        <input id="quantidade-agua" type="range" min="0" max="100" step="1" required>
+                        <button type="submit" id="enviar-avaliacao" class="botao-custom">Enviar avaliação</button>
+                    </form>
+
                 </section>
             </div>
         </main>
@@ -101,7 +134,7 @@
         </footer>
     </div>
 
-    <script src="scripts.js"></script>
+    <script src="scripts/sidebar.js"></script>
 
 </body>
 
