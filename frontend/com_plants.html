@@ -10,6 +10,8 @@
     <link rel="shortcut icon" href="images/lotus.png">
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/com_plants.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="scripts/add_plant.js" defer></script>
 </head>
 
 <body>
@@ -53,7 +55,13 @@
                 <article id="detalhes-planta">
                     <h1>Margarida</h1>
                     <section id="avaliacao-planta">
-                        <p>Facilidade de cuidar</p>
+                        <label>Facilidade de cuidar:
+                            <button class="star1 fa fa-star checked"></button>
+                            <button class="star2 fa fa-star checked"></button>
+                            <button class="star3 fa fa-star "></button>
+                            <button class="star4 fa fa-star"></button>
+                            <button class="star5 fa fa-star"></button>
+                        </label>
                         <label for="quantidade-agua">Quantidade de água</label>
                         <input id="quantidade-agua" type="range" min="0" max="100" step="1" disabled>
                     </section>
@@ -85,7 +93,13 @@
                     <h2>Avaliar planta</h2>
                     <label for="comentario">Comentário</label>
                     <textarea name="comentario" id="comentario"></textarea>
-                    <p>Facilidade de cuidar</p>
+                    <label>Facilidade de cuidar:
+                        <button class="star1 fa fa-star checked"></button>
+                        <button class="star2 fa fa-star checked"></button>
+                        <button class="star3 fa fa-star "></button>
+                        <button class="star4 fa fa-star"></button>
+                        <button class="star5 fa fa-star"></button>
+                    </label>
                     <label for="quantidade-agua">Quantidade de água</label>
                     <input id="quantidade-agua" type="range" min="0" max="100" step="1">
                     <button id="enviar-avaliacao">Enviar avaliação</button>

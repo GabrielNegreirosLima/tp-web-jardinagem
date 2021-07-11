@@ -9,20 +9,21 @@ stars.forEach( el => {
 });
 
 function starsChecker(starEl){
-    const currentStarIdNumber = starEl.id[4];
+    console.log(starEl.classList[0][4]);
+    const currentStarIdNumber = starEl.classList[0][4];
     const numberOfStars = 5;
     let previousStar;
     
     if (starEl.classList.contains("checked")) {
         for (let index = numberOfStars; index >= currentStarIdNumber; index--) {
-            previousStar = document.querySelector(`#star${index}`);
+            previousStar = document.querySelector(`.star${index}`);
             previousStar.classList.remove("checked");
         }
         return;
     }
 
     for (let index = 1; index <= currentStarIdNumber; index++) {
-        previousStar = document.querySelector(`#star${index}`);
+        previousStar = document.querySelector(`.star${index}`);
         previousStar.classList.add("checked");
     }
     return;
@@ -31,7 +32,7 @@ function starsChecker(starEl){
 // Reset button
 const resetEl = document.querySelector(".botao-exclude");
 resetEl.addEventListener("click", e => {
-    const star1El = document.querySelector("#star1");
+    const star1El = document.querySelector(".star1");
     starsChecker(star1El);
     star1El.classList.add("checked")
 });

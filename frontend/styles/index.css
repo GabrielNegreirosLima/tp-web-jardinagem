@@ -223,6 +223,12 @@ body.menu-visivel {
 
 /* Stars */
 
+button.fa{
+    background: none;
+    border: none;
+    padding: 0;
+}
+
 .fa.fa-star {
     filter: drop-shadow(2px 2px 2px var(--cor-text));
     transition: all 200ms ease-out;
