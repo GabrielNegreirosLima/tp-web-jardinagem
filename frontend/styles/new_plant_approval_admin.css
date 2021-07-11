@@ -53,6 +53,10 @@
         text-align: center;
     }
     
+    #section-one>h2 {
+        color: var(--cor-texto-dir);
+    }
+    
     #section-two {
         grid-area: section-two;
         background-color: var(--cor-section-esq);
