@@ -37,7 +37,7 @@
                 <a href="">Meu Perfil</a>
             </button>
             <button class="botao-custom botao-sidebar">
-                <a href="">Adicionar nova planta</a>
+                <a href="add_plant.html">Adicionar nova planta</a>
             </button>
             <button class="botao-custom botao-sidebar">
                 <a href="">Sair da conta</a>
@@ -52,36 +52,37 @@
                     <fieldset>
                         <legend>Preencha os campus relativos a planta:</legend>
                             <label>Nome:
-                                <input type="text" name="name">
+                                <input type="text" name="name" required>
                             </label>
                             <p>Escolha o tipo:
                                 <label>
-                                    <input type="radio" name="type" value="fruit">Frutíferas
+                                    <input type="radio" name="type" value="fruit" required>Frutíferas
                                 </label>
                                 <label>
-                                    <input type="radio" name="type" value="ornamental">Ornamentais
+                                    <input type="radio" name="type" value="ornamental" required>Ornamentais
                                 </label>
                                 <label>
-                                    <input type="radio" name="type" value="flower">Flor
+                                    <input type="radio" name="type" value="flower" required>Flor
                                 </label>
                             </p>
                             <label>Selecione as imagens/fotos:
-                                <input type="file" id="imagem">
+                                <input type="file" id="imagem" required> 
                             </label>
                             <label>Descrição da planta: 
-                                <textarea name="descricao" id="descricao" cols="50" rows="5"></textarea>
+                                <textarea name="descricao" id="descricao" cols="50" rows="5" required></textarea>
                             </label>
                             <label>Facilidade de cuidar:
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
+                                <span id="star1" class="fa fa-star checked"></span>
+                                <span id="star2" class="fa fa-star"></span>
+                                <span id="star3" class="fa fa-star"></span>
+                                <span id="star4" class="fa fa-star"></span>
+                                <span id="star5" class="fa fa-star"></span>
                             </label>
                             <label>Quantidade de água necessária:
                                 <input id="quantidade-agua" type="range" min="0" max="100" step="1">
                             </label>                            
-                        <button>Ok</button>
+                        <button type="reset" class="botao-custom botao-exclude">Limpar formulário</button>
+                        <button type="submit" class="botao-custom">Adicionar</button>
                     </fieldset>
                 </form>
             </section>

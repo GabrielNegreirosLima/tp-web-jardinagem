@@ -10,6 +10,7 @@
     --cor-texto: #000;
     --cor-botao-custom: rgb(137, 255, 137);
     --cor-texto-botao-custom: #000;
+    --cor-botao-exclude: rgb(255, 93, 93);
 }
 
 html, body {   
@@ -85,6 +86,14 @@ h1, h2, h3{
 .botao-custom:hover{
     right: 1px;
     bottom: 1px;
+}
+
+.botao-exclude {
+    position: relative;
+    padding: 10px;
+    background-color: var(--cor-botao-exclude);
+    border: 1px solid darkgreen;
+    border-radius: 30px;
 }
 
 /* banner */
@@ -195,6 +204,11 @@ body.menu-visivel {
     text-align: justify;
     width: 250px;
     height: 300px;
+}
+
+.post-plantas a{
+    text-decoration: none;
+    color: var(--cor-texto);
 }
 
 .foto-planta {
