@@ -143,7 +143,7 @@ body.menu-visivel #barra-lateral {
     top: 0;
     position: fixed;
     height: 100%;
-    z-index: -1;
+    z-index: 0;
 }
 
 #barra-lateral img {
@@ -195,6 +195,8 @@ body.menu-visivel {
     justify-content: center;    
 }
 
+/* Article */
+
 .post-plantas{    
     text-overflow: ellipsis;
     overflow: hidden;
@@ -217,6 +219,23 @@ body.menu-visivel {
     margin-right: auto;
     width: 100px;
     height: 100px;
+}
+
+/* Stars */
+
+button.fa{
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.fa.fa-star {
+    filter: drop-shadow(2px 2px 2px var(--cor-text));
+    transition: all 200ms ease-out;
+}
+
+.checked { 
+    color: orange;
 }
 
 /* Footer */

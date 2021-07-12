@@ -1,6 +1,11 @@
 // Stars selection
 const stars = document.querySelectorAll(":not([disabled]).fa.fa-star");
+<<<<<<< HEAD
 stars.forEach(el => {
+=======
+
+stars.forEach( el => {
+>>>>>>> 1198d6b6cf4800e54e7422d3f9e7c9bdbc968872
     el.addEventListener("click", e => {
         const starEl = e.currentTarget;
         console.log(starEl);
@@ -8,11 +13,19 @@ stars.forEach(el => {
     });
 });
 
+<<<<<<< HEAD
 function starsChecker(starEl) {
     const currentStarIdNumber = starEl.classList[0][4];
     const numberOfStars = 5;
     let previousStar;
 
+=======
+function starsChecker(starEl){
+    const currentStarIdNumber = starEl.classList[0][4];
+    const numberOfStars = 5;
+    let previousStar;
+    
+>>>>>>> 1198d6b6cf4800e54e7422d3f9e7c9bdbc968872
     if (starEl.classList.contains("checked")) {
         for (let index = numberOfStars; index >= currentStarIdNumber; index--) {
             previousStar = document.querySelector(`:not([disabled]).star${index}`);

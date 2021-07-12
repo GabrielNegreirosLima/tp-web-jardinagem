@@ -53,16 +53,6 @@ input[type="range"] {
     vertical-align: middle;
 }
 
-.fa.fa-star {
-    filter: drop-shadow(2px 2px 2px var(--cor-text));
-    transition: all 200ms ease-out;
-}
-
-.checked { 
-    color: orange;
-}
-
-
 /* Dark mode */
 
 @media (prefers-color-scheme: dark) {
