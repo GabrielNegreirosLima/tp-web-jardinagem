@@ -34,33 +34,6 @@
         font-size: 14px;
     }
     
-<<<<<<< HEAD
-=======
-    header {
-        grid-area: header;
-        background-image: linear-gradient(0deg, rgba(26, 211, 58, 255), rgba(173, 204, 251, 255));
-        background-image: url('../images/marguerite.jpg');
-        background-repeat: repeat-x;
-        background-size: 40%;
-    }
-    
-    #login-img-nav {
-        width: 4%;
-        height: auto;
-        padding-right: 5px;
-        margin-left: 50px;
-        margin-top: 10px;
-    }
-    
-    #texto-icone-voltar {
-        color: white;
-        font-family: sans-serif;
-        font-size: x-large;
-        font-weight: bold;
-        text-shadow: 2px 2px 4px #000000
-    }
-    
->>>>>>> 1198d6b6cf4800e54e7422d3f9e7c9bdbc968872
     main {
         grid-area: main;
         display: grid;
@@ -117,8 +90,6 @@
         max-height: 200px;
     }
     
-<<<<<<< HEAD
-=======
     .estrela {
         max-width: 30px;
         max-height: 30px;
@@ -126,7 +97,6 @@
         box-shadow: 0 0.5em 0.6em -0.7em;
     }
     
->>>>>>> 1198d6b6cf4800e54e7422d3f9e7c9bdbc968872
     .img-mais-plantas {
         width: 10%;
         height: 10%;
@@ -212,10 +182,6 @@
     
     #section-two #div-descricao-txt {
         text-align: left;
-<<<<<<< HEAD
-        margin-right: 5%;
-=======
->>>>>>> 1198d6b6cf4800e54e7422d3f9e7c9bdbc968872
     }
     
     #section-two #article-facilidade-cuidado {
@@ -226,19 +192,11 @@
     }
     
     #div-estrelas {
-<<<<<<< HEAD
-        padding-top: 18px;
-    }
-    
-    #h-facilidade-cuidar {
-        margin-left: 10px;
-=======
         padding-top: 10px;
     }
     
     #h-facilidade-cuidar {
         margin-left: 5px;
->>>>>>> 1198d6b6cf4800e54e7422d3f9e7c9bdbc968872
     }
     
     #section-two>#article-consumo-agua {
@@ -258,11 +216,7 @@
     }
     
     .article-mais-fotos-planta {
-<<<<<<< HEAD
-        border: 1px solid var(--cor-texto-dir);
-=======
         border: 1px solid cor-texto-dir;
->>>>>>> 1198d6b6cf4800e54e7422d3f9e7c9bdbc968872
         margin-left: 10px;
         margin-bottom: 5px;
         width: 95%;
@@ -278,23 +232,4 @@
         width: 150px;
         height: 30px;
         margin-top: 7px;
-<<<<<<< HEAD
-    }
-    /*stars*/
-    
-    .fa.fa-star {
-        filter: drop-shadow(2px 2px 2px var(--cor-text));
-        transition: all 200ms ease-out;
-    }
-    
-    .checked {
-        color: orange;
-    }
-    
-    button.fa {
-        background: none;
-        border: none;
-        padding: 0;
-=======
->>>>>>> 1198d6b6cf4800e54e7422d3f9e7c9bdbc968872
     }
