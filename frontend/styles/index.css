@@ -209,7 +209,7 @@ body.menu-visivel {
     background-color: var(--cor-artigos);
     text-align: justify;
     width: 250px;
-    height: 300px;
+    height: auto;
 }
 
 .post-plantas a{
