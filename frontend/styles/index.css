@@ -101,13 +101,17 @@ h1, h2, h3{
 .banner{   
     border: 5px solid black;
     margin-left: auto;
-    margin-right: auto;
-    width: 500px;    
+    margin-right: auto;    
+    background-image: url('../images/banner.png');
+    
 }
 
 .banner h1{
-    font-size: 30px;
-    text-align: center;
+    font-size: 36px;
+    font-family: sans-serif;
+    color:black;
+    text-align: center;    
+    text-shadow: -2px 2px white, 2px 2px white, 2px -2px white, -2px -2px white;
 }
 
 
@@ -205,7 +209,7 @@ body.menu-visivel {
     background-color: var(--cor-artigos);
     text-align: justify;
     width: 250px;
-    height: 300px;
+    height: auto;
 }
 
 .post-plantas a{
@@ -217,8 +221,9 @@ body.menu-visivel {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 100px;
-    height: 100px;
+    margin-bottom: 1em;
+    width: 150px;
+    height: 150px;
 }
 
 /* Stars */
