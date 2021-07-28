@@ -31,8 +31,10 @@ function starsChecker(starEl) {
 
 // Reset button
 const resetEl = document.querySelector(".botao-exclude");
-resetEl.addEventListener("click", e => {
-    const star1El = document.querySelector(":not([disabled]).star1");
-    starsChecker(star1El);
-    star1El.classList.add("checked")
-});
+if (resetEl) {
+    resetEl.addEventListener("click", e => {
+        const star1El = document.querySelector(":not([disabled]).star1");
+        starsChecker(star1El);
+        star1El.classList.add("checked")
+    })
+}

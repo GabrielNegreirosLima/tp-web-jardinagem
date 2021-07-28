@@ -5,15 +5,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/estilos_login.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="shortcut icon" href="images/lotus.png">
+    <title>Login</title>
 </head>
 
 <body>
-    <header>
-        <a href="index.html" target="_blank"> <img id="login-img-nav" src="images/return.png" alt="Símbolo de uma seta, que ao
-                    clicar, retorna o usuario para home"><span id="texto-icone-voltar">Voltar</span></a>
+    <header id="cabecalho">
 
+        <div class="logo">
+            <img src="images/lotus.png" alt="Ícone da comunidade de jardinagem">
+            <h1>Comunidade de jardinagem</h1>
+        </div>
+        <nav>
+            <button class="botao-custom">
+                    <a href="index.html">Página Inicial</a>
+                </button>
+            <button class="botao-custom">
+                    <a href="">Perfil</a>
+                </button>
+            <button class="botao-custom">
+                    <a href="fav_plants.html">Plantas favoritas</a>
+                </button>
+        </nav>
     </header>
     <main>
         <section>
@@ -22,7 +37,7 @@
                 <img id="login-img" src="images/icon-login.png" alt="Símbolo de um boneco que representa o usuário">
                 <h1>Login do Usuário</h1>
             </div>
-            <form action="">
+            <form action="" id="form-login">
                 <label for="login-input" id="login-input-lbl">e-mail:
                     </label>
                 <input name="email" id="login-input" type="email" required>
