@@ -1,0 +1,23 @@
+{
+  "name": "comunidade-de-jardinagem",
+  "version": "1.0.0",
+  "description": "O backend de uma comunidade de jardinagem!",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GabrielNegreirosLima/tp-web-jardinagem.git"
+  },
+  "author": "@GabrielNegreirosLima, @aritana, @yansirianni",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GabrielNegreirosLima/tp-web-jardinagem/issues"
+  },
+  "homepage": "https://github.com/GabrielNegreirosLima/tp-web-jardinagem#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
