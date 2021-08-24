@@ -1,0 +1,12 @@
+# ToDo
+- [ ] Ler o exemplo básico da biblioteca react-router (https://reactrouter.com/web/guides/quick-start/1st-example-basic-routing)
+- [ ] Implementar um sistema de roteamente básico com todas as rotas usadas na aplicação
+  - [ ] Criar um component de rotas (src/components/AppRoutes.js)
+- [ ] Começar a portar as telas
+  - [ ] Dica: Criar components de tela em uma pasta separada (e.g screens)
+  - [ ] Criar uma pasta para cada tela contendo o componente e um arquivo css separado
+  - [ ] Exemplo src/screens/Login, contendo:
+    - Login.js -> componente da tela
+    - login.css -> regras de css especificas da tela de login
+    - index.js -> exporta o component Login.js para facilitar em imports futuros
+- [ ] Criar uma rota para cada tela no arquivo de rotas (AppRoutes.js) 
