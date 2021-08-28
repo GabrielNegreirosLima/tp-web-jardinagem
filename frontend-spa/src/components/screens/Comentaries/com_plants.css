@@ -1,0 +1,74 @@
+#pagina-planta{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: 
+    "detalhes-planta comentarios-planta"
+    "detalhes-planta avaliar-planta"    
+}
+
+#detalhes-planta{
+    padding-left: 1em;
+    grid-area: detalhes-planta;    
+}
+
+#fotos-planta img{
+    max-width:400px;
+    max-height:400px;
+    width: auto;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#comentarios-planta{
+    grid-area: comentarios-planta;      
+    padding-left: 1em;
+}
+
+#comentarios-planta article{
+    border: 2px solid black;
+    padding: 1em;
+    border-radius: 15px;
+    margin-bottom: 5px;
+}
+
+article p {
+    text-align: justify;
+}
+
+h3 {
+    display: inline;
+}
+
+
+#enviar-avaliacao {
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#avaliacao-planta{
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    grid-area: avaliar-planta;   
+    padding-left: 1em;
+    padding-right: 1em;
+    justify-content: space-between;
+}
+
+#enviar-avaliacao {
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#quantidade-agua{
+    margin-bottom: 1em;
+}

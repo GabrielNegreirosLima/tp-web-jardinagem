@@ -23,7 +23,7 @@ function AppRoutes(){
           <Route path="/new_plant_approval"> {/*Will have nested routing
             <NewPlantApproval />
           </Route>
-          <Route path="/home"> 
+          <Route path="/"> 
             <Home />
           </Route>
           <Route path="/fav_plants">  {/*Will have nested routing
@@ -33,7 +33,7 @@ function AppRoutes(){
             <FavPlantsPublic />
           </Route>
           <Route path="/comentaries"> {/*Will have nested routing
-            <FavPlantsPublic />
+            <Comentaries />
           </Route>
           <Route path="/add_plant"> 
             <AddPlant />

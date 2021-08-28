@@ -1,0 +1,235 @@
+    /* Geral */
+    
+     :root {
+        --cor-header: #A1FAAA;
+        --cor-barra-lateral: #A1FAAA;
+        --cor-artigos: #A1FAAA;
+        --cor-rodape: #3EAF3F;
+        --cor-background: #FFF;
+        --cor-titulos: #000;
+        --cor-texto-esq: #000;
+        --cor-texto-dir: white;
+        --cor-botao-custom: rgb(137, 255, 137);
+        --cor-texto-botao-custom: #000;
+        --cor-background-dir: #203522;
+        --cor-borda-section-esq: A1E29F;
+        --cor-section-esq: rgb(161, 226, 159, 100%);
+    }
+    
+    html,
+    body {
+        margin: 0px;
+        min-height: 100vh;
+        color: var(--cor-texto);
+        overflow-x: auto;
+        overflow-y: auto;
+    }
+    
+    body {
+        display: grid;
+        grid-template-rows: 100px auto;
+        grid-template-columns: 100%;
+        grid-template-areas: "header""main";
+        font-family: sans-serif;
+        font-size: 14px;
+    }
+    
+    main {
+        grid-area: main;
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 40% 60%;
+        grid-template-areas: "section-one section-two";
+    }
+    
+    #section-one {
+        grid-area: section-one;
+        width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: 0px;
+        background-color: var(--cor-background-dir);
+        color: var(--cor-texto-dir);
+        text-align: center;
+    }
+    
+    #section-one>h2 {
+        color: var(--cor-texto-dir);
+    }
+    
+    #section-two {
+        grid-area: section-two;
+        background-color: var(--cor-section-esq);
+        margin-left: 0px;
+        width: 100%;
+    }
+    
+    #section-two>* {
+        margin-left: 8px;
+    }
+    
+    .img-inseridas,
+    .img-mais-plantas,
+    #img-descricao {
+        width: auto;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .img-inseridas {
+        max-width: 100px;
+        max-height: 100px;
+        align-self: flex-start;
+        position: relative;
+        left: -30px;
+    }
+    
+    #img-descricao {
+        max-width: 200px;
+        max-height: 200px;
+    }
+    
+    .estrela {
+        max-width: 30px;
+        max-height: 30px;
+        margin-left: 11px;
+        box-shadow: 0 0.5em 0.6em -0.7em;
+    }
+    
+    .img-mais-plantas {
+        width: 10%;
+        height: 10%;
+    }
+    
+    .div-novas-plantas {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        border: 1px solid var(--cor-borda-section-esq);
+    }
+    
+    .div-novas-plantas>p {
+        margin-left: -50px;
+        margin-right: 2px;
+        width: 80%;
+    }
+    
+    .div-novas-plantas,
+    form {
+        margin-bottom: 10px;
+    }
+    
+    #section-one>article {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 100%;
+        max-height: 26%;
+        text-align: left;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 10px;
+        border: 1px solid var(--cor-texto-dir);
+    }
+    
+    #section-one form {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        margin-left: -10px;
+        width: 19%;
+        justify-content: center;
+    }
+    
+    form>button {
+        background-color: var(--cor-botao-custom);
+        border-radius: 30px;
+    }
+    
+    #form-pesquisa>button {
+        width: 100px;
+        height: 30px;
+    }
+    
+    input {
+        border-radius: 10px;
+        width: 300px;
+        height: 30px;
+    }
+    
+    #section-one form>button {
+        height: 30px;
+        width: 80px;
+        margin-top: 5px;
+    }
+    
+    #section-two>#article-descricao {
+        display: flex;
+        flex-wrap: nowrap;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    #section-two #div-descricao-img {
+        text-align: center;
+    }
+    
+    #section-two #div-descricao-txt>h1 {
+        text-align: center;
+    }
+    
+    #section-two #div-descricao-txt {
+        text-align: left;
+    }
+    
+    #section-two #article-facilidade-cuidado {
+        display: flex;
+        flex-wrap: nowrap;
+        width: 100%;
+        justify-content: flex-start;
+    }
+    
+    #div-estrelas {
+        padding-top: 18px;
+    }
+    
+    #h-facilidade-cuidar {
+        margin-left: 5px;
+    }
+    
+    #section-two>#article-consumo-agua {
+        display: flex;
+        flex-wrap: nowrap;
+        width: 100%;
+        justify-content: flex-start;
+    }
+    
+    #article-consumo-agua>#input-consumo-agua {
+        width: 27%;
+        margin-top: 11px;
+    }
+    
+    #article-consumo-agua>label {
+        margin-left: 5px;
+    }
+    
+    .article-mais-fotos-planta {
+        border: 1px solid cor-texto-dir;
+        margin-left: 10px;
+        margin-bottom: 5px;
+        width: 95%;
+        border: 1px solid var(--cor-background);
+    }
+    
+    .article-mais-fotos-planta>img {
+        margin-top: 3px;
+        margin-left: 3px;
+    }
+    
+    #form-salvar-edicao>button {
+        width: 150px;
+        height: 30px;
+        margin-top: 7px;
+    }
