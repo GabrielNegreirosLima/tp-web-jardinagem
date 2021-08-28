@@ -1,4 +1,5 @@
-import "./login.css"
+import './login.css'
+import React from 'react';
 import iconLogin from "../../../images/icon-login.png"
 
 function Login(){
@@ -10,12 +11,12 @@ function Login(){
         <h1>Login do Usuário</h1>
       </div>
       <form action="" id="form-login">
-        <label for="login-input" id="login-input-lbl">E-mail:</label>
+        <label htmlFor="login-input" id="login-input-lbl">E-mail:</label>
         <input name="email" id="login-input" type="email" required />
-        <label for="password-input" id="password-input-lbl">
+        <label htmlFor="password-input" id="password-input-lbl">
           Senha:
         </label>
-        <input name="password" id="password-input" type="password" minlength="8" required />
+        <input name="password" id="password-input" type="password" minLength="8" required />
         <button type="submit" id="login-button">Entrar</button>
       </form>
     </div>
