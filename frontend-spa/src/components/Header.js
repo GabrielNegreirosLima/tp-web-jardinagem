@@ -29,7 +29,7 @@ function Header(){
 function toggleSidebar(){
   let bodyEl = document.querySelector("body");
 
-  bodyEl.classList.toggle("menu-visivel");
+  bodyEl.classNameList.toggle("menu-visivel");
 }
 
 export default Header;

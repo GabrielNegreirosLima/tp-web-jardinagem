@@ -13,7 +13,7 @@ function Sidebar(props){
               <a href="add_plant.html">Adicionar nova planta</a>
           </button>
           <button className="botao-custom botao-sidebar">
-              <a href="">Sair da conta</a>
+              <a href="/logout">Sair da conta</a>
           </button>
       </aside>
     </div>
