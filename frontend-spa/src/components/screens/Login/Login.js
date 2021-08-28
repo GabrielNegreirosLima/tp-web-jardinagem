@@ -1,5 +1,4 @@
-import './login.css'
-import React from 'react';
+import "./login.css"
 import iconLogin from "../../../images/icon-login.png"
 
 function Login(){

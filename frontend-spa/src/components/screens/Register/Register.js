@@ -1,4 +1,5 @@
 import icon from "../../../images/icon-login.png"
+import "./register.css"
 
 function Register(){
   return (
