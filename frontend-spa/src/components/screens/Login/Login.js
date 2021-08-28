@@ -4,7 +4,7 @@ function Login(){
   return (
     <div>
       <div id="cabecalho-section">
-        <img id="login-img" src="../../../../images/icon-login.png" alt="Símbolo de um boneco que representa o usuário">
+        <img id="login-img" src="../../../images/icon-login.png" alt="Símbolo de um boneco que representa o usuário">
         </img>
         <h1>Login do Usuário</h1>
       </div>
