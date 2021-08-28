@@ -1,9 +1,11 @@
+import iconUser from "../images/icon-user.png";
+
 function Sidebar(props){
 
   return (
     <div> 
       <aside id="barra-lateral">
-          <img src="images/icon-user.png" alt="Foto do usuário" />
+          <img src={iconUser} alt="Foto do usuário" />
           <button class="botao-custom botao-sidebar">
               <a href="user_profile.html">Meu Perfil</a>
           </button>
