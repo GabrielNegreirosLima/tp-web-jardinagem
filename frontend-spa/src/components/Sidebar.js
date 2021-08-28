@@ -6,7 +6,7 @@ function Sidebar(props){
     <div> 
       <aside id="barra-lateral">
           <img src={iconUser} alt="Foto do usuário" />
-          <button class="botao-custom botao-sidebar">
+          <button className="botao-custom botao-sidebar">
               <a href="user_profile.html">Meu Perfil</a>
           </button>
           <button className="botao-custom botao-sidebar">
