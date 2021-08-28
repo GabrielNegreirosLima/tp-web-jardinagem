@@ -1,7 +1,7 @@
 
 function Home(){
   return (
-    <div>
+    
       <main id="principal">
             <section>
                 <div className="banner">
@@ -95,8 +95,7 @@ function Home(){
                     </a>
                 </article>                 
             </section>
-        </main>
-    </div>
+        </main>    
   );  
 }
 
