@@ -1,3 +1,5 @@
+import logo from "../images/lotus.png"
+
 function Header(){
 
     return (
@@ -6,7 +8,7 @@ function Header(){
             ☰
           </button>
           <div class="logo">
-              <img src="images/lotus.png" alt="Ícone da comunidade de jardinagem" />
+              <img src={logo} alt="Ícone da comunidade de jardinagem" />
               <h1>Comunidade de jardinagem</h1>
           </div>
           <nav>
