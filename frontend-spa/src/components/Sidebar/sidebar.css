@@ -1,0 +1,60 @@
+
+#barra-lateral {
+  display: none;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-around;
+  grid-area: main;
+  position: relative; 
+  left: -250px;
+  width: 250px; 
+  background-color: var(--cor-barra-lateral);
+  transition: all 200ms ease-out;     
+}
+
+#barra-lateral.barra-lateral-visivel {
+  display: flex;
+}
+
+#toggle-sidebar {   
+  position: relative;
+  margin: 20px;
+  top: 0%;
+  height: 2em;
+  width: 2em;
+  cursor: pointer;
+  border-radius: 3px;
+  border: 1px solid darkgreen;
+  text-align: center;    
+}
+
+body.menu-visivel #barra-lateral {
+  left: 0;
+  top: 0;
+  position: fixed;
+  height: 100%;
+  z-index: 0;
+}
+
+#barra-lateral img {
+  top: 50px;
+  visibility: hidden; 
+  width: 100px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+}
+
+body.menu-visivel #barra-lateral img {
+  position: relative;
+  visibility: visible;
+}
+
+.botao-custom.botao-sidebar {
+  visibility: hidden;
+}
+
+body.menu-visivel .botao-custom.botao-sidebar {
+  visibility: visible;
+}

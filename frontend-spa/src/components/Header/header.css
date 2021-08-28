@@ -1,0 +1,61 @@
+
+/* Header */
+
+#cabecalho {
+  grid-area: header;
+  display: flex;    
+  justify-content: flex-start;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: var(--cor-header);    
+  font-size: 15px;    
+  padding: 10px;
+  z-index: 999;
+}
+
+#cabecalho nav {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin-left: 50px;
+}
+
+.logo {
+  width: 30%;
+  display: flex;
+  gap: 3px;
+}
+
+.logo img {
+  width: 30px;
+}
+
+.logo h1 {
+  font-size: 18px;
+}
+
+.botao-custom {
+  position: relative;
+  padding: 10px;
+  background-color: var(--cor-botao-custom);
+  border: 1px solid darkgreen;
+  border-radius: 30px;
+}
+
+.botao-custom a{
+  color: var(--cor-texto-botao-custom);
+}
+
+.botao-custom:hover{
+  right: 1px;
+  bottom: 1px;
+}
+
+.botao-exclude {
+  position: relative;
+  padding: 10px;
+  background-color: var(--cor-botao-exclude);
+  border: 1px solid darkgreen;
+  border-radius: 30px;
+}

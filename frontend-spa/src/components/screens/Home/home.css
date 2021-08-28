@@ -1,0 +1,25 @@
+
+.post-plantas{    
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding: 1em;    
+  margin: 0.5em;
+  background-color: var(--cor-artigos);
+  text-align: justify;
+  width: 250px;
+  height: auto;
+}
+
+.post-plantas a{
+  text-decoration: none;
+  color: var(--cor-texto);
+}
+
+.foto-planta {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1em;
+  width: 150px;
+  height: 150px;
+}
