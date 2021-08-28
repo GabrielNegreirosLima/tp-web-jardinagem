@@ -4,6 +4,7 @@ import {
   Route
 } from "react-router-dom";
 import Login from "./screens/Login/"
+import Register from "./screens/Register/"
 
 
 function AppRoutes(){
@@ -13,10 +14,10 @@ function AppRoutes(){
           <Route path="/login">
             <Login />
           </Route>
-          {/*
           <Route path="/register">
             <Register />
           </Route>
+          {/*
           <Route path="/user_profile"> {/*Will have nested routing
             <UserProfile />
           </Route>
