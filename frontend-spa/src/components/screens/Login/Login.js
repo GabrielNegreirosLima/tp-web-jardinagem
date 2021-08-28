@@ -10,15 +10,13 @@ function Login(){
         <h1>Login do Usuário</h1>
       </div>
       <form action="" id="form-login">
-        <label for="login-input" id="login-input-lbl">e-mail:
-            </label>
-        <input name="email" id="login-input" type="email" required></input>
-
-        <label for="password-input" id="password-input-lbl">senha:<a href="algumaPagina"
-                    target="_blank">Esqueceu?</a></label>
-        <input name="password" id="password-input" type="password" minlength="8" required></input>
-
-        <button type="submit" id="login-button">continuar</button>
+        <label for="login-input" id="login-input-lbl">E-mail:</label>
+        <input name="email" id="login-input" type="email" required />
+        <label for="password-input" id="password-input-lbl">
+          Senha:
+        </label>
+        <input name="password" id="password-input" type="password" minlength="8" required />
+        <button type="submit" id="login-button">Entrar</button>
       </form>
     </div>
   );
