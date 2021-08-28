@@ -9,10 +9,10 @@ function Sidebar(props){
           <button class="botao-custom botao-sidebar">
               <a href="user_profile.html">Meu Perfil</a>
           </button>
-          <button class="botao-custom botao-sidebar">
+          <button className="botao-custom botao-sidebar">
               <a href="add_plant.html">Adicionar nova planta</a>
           </button>
-          <button class="botao-custom botao-sidebar">
+          <button className="botao-custom botao-sidebar">
               <a href="">Sair da conta</a>
           </button>
       </aside>
