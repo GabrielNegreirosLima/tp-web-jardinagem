@@ -22,13 +22,13 @@ function Header(){
         </div>
         <nav>
             <button className="botao-custom">
-                <a href="index.html">Página Inicial</a>
+                <a href="/">Página Inicial</a>
             </button>
             <button className="botao-custom">
-                <a href="user_profile.html">Perfil</a>
+                <a href="user_profile">Perfil</a>
             </button>
             <button className="botao-custom">
-                <a href="fav_plants.html">Plantas favoritas</a>
+                <a href="fav_plants">Plantas favoritas</a>
             </button>
         </nav>
     </header>

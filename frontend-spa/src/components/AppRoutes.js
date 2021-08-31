@@ -7,6 +7,7 @@ import Login from "./screens/Login/"
 import Register from "./screens/Register/"
 import Home from "./screens/Home/"
 import UserProfile from "./screens/UserProfile/"
+import NewPlantApproval from "./screens/NewPlantApproval/"
 
 
 function AppRoutes(){
@@ -22,13 +23,13 @@ function AppRoutes(){
           <Route path="/user_profile"> {/*Will have nested routing */}
             <UserProfile />
           </Route>
+          <Route path="/new_plant_approval"> {/*Will have nested routing  */}
+            <NewPlantApproval />
+          </Route>
           <Route path="/"> 
             <Home />
           </Route>
           {/*
-          <Route path="/new_plant_approval"> {/*Will have nested routing
-            <NewPlantApproval />
-          </Route>
           <Route path="/fav_plants">  {/*Will have nested routing
             <FavPlants />
           </Route>
