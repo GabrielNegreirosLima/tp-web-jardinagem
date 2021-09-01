@@ -14,7 +14,7 @@ function UserProfile(){
           <img src={iconUser} alt="Foto do usuário" />
         </section>
         <section>
-          <button id="edit" class="botao-custom">Editar Perfil</button>
+          <button id="edit" className="botao-custom">Editar Perfil</button>
           <form action="/add_plant" method="post">
             <fieldset>
                 <label>Nome e sobrenome: 
@@ -36,7 +36,7 @@ function UserProfile(){
                 <label>Telefone
                   <input type="tel" name="phone" id="phone" value="(31) 99999-9999" required disabled />
                 </label>
-                <button class="botao-custom" id="save-profile" disabled>Salvar</button>
+                <button className="botao-custom" id="save-profile" disabled>Salvar</button>
             </fieldset>
           </form>
         </section>
