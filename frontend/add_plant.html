@@ -2,103 +2,100 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="color-scheme" content="light dark">
-    <title>Comunidade de jardinagem</title>
-    <link rel="shortcut icon" href="images/lotus.png">
-    <link rel="stylesheet" href="styles/index.css">
-    <link rel="stylesheet" href="styles/add_plant.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="scripts/stars_rating.js" defer></script>
+  <meta charset="utf-8">
+  <meta name="color-scheme" content="light dark">
+  <title>Comunidade de jardinagem</title>
+  <link rel="shortcut icon" href="images/lotus.png">
+  <link rel="stylesheet" href="styles/index.css">
+  <link rel="stylesheet" href="styles/add_plant.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="scripts/stars_rating.js" defer></script>
 </head>
 
 <body>
-    <div class="container">
-        <header id="cabecalho">
-            <button id="toggle-sidebar">☰</button>
-            <div class="logo">
-                <img src="images/lotus.png" alt="Ícone da comunidade de jardinagem">
-                <h1>Comunidade de jardinagem</h1>
-            </div>
-            <nav>
-                <button class="botao-custom">
-                    <a href="index.html">Página Inicial</a>
-                </button>
-                <button class="botao-custom">
-                    <a href="user_profile.html">Perfil</a>
-                </button>
-                <button class="botao-custom">
-                    <a href="fav_plants.html">Plantas favoritas</a>
-                </button>
-            </nav>
-        </header>
-        <aside id="barra-lateral">
-            <img src="images/icon-user.png" alt="Foto do usuário">
-            <button class="botao-custom botao-sidebar">
-                <a href="user_profile.html">Meu Perfil</a>
-            </button>
-            <button class="botao-custom botao-sidebar">
-                <a href="add_plant.html">Adicionar nova planta</a>
-            </button>
-            <button class="botao-custom botao-sidebar">
-                <a href="">Sair da conta</a>
-            </button>
-        </aside>
-        <main id="principal">
-            <section>
-                <h1 id="title">Adicionar uma nova planta</h1>
-            </section>
-            <section>
-                <form action="/add_plant" method="post">
-                    <fieldset>
-                        <legend>Preencha os campus relativos a planta:</legend>
-                        <label>Nome:
-                            <input type="text" name="name" required>
-                        </label>
-                        <p>Escolha o tipo:
-                            <label>
-                                <input type="radio" name="type" value="fruit" required>Frutíferas
-                            </label>
-                            <label>
-                                <input type="radio" name="type" value="ornamental" required>Ornamentais
-                            </label>
-                            <label>
-                                <input type="radio" name="type" value="flower" required>Flor
-                            </label>
-                        </p>
-                        <label>Selecione as imagens/fotos:
-                            <input type="file" id="imagem" required>
-                        </label>
-                        <label>Descrição da planta:
-                            <textarea name="descricao" id="descricao" cols="50" rows="5" required></textarea>
-                        </label>
-                        <label>Facilidade de cuidar:
-                            <button type="button" class="star1 fa fa-star checked"></button>
-                            <button type="button" class="star2 fa fa-star "></button>
-                            <button type="button" class="star3 fa fa-star "></button>
-                            <button type="button" class="star4 fa fa-star"></button>
-                            <button type="button" class="star5 fa fa-star"></button>
-                        </label>
-                        <label>Quantidade de água necessária:
-                            <input id="quantidade-agua" type="range" min="0" max="100" step="1">
-                        </label>
-                        <button type="reset" class="botao-custom botao-exclude">Limpar formulário</button>
-                        <button type="submit" class="botao-custom">Adicionar</button>
-                    </fieldset>
-                </form>
-            </section>
-        </main>
-        <footer id="rodape">
-            <div>
-                Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a>
-                from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>, and by <a
-                    href="https://www.klipartz.com title=" title="Klipartz">Klipartz</a>
-            </div>
-        </footer>
-    </div>
-
-    <script src="scripts/sidebar.js"></script>
-
+  <div class="container">
+    <header id="cabecalho">
+      <button id="toggle-sidebar">☰</button>
+      <div class="logo">
+        <img src="images/lotus.png" alt="Ícone da comunidade de jardinagem">
+        <h1>Comunidade de jardinagem</h1>
+      </div>
+      <nav>
+        <button class="botao-custom">
+          <a href="index.html">Página Inicial</a>
+        </button>
+        <button class="botao-custom">
+          <a href="user_profile.html">Perfil</a>
+        </button>
+        <button class="botao-custom">
+          <a href="fav_plants.html">Plantas favoritas</a>
+        </button>
+      </nav>
+    </header>
+    <aside id="barra-lateral">
+      <img src="images/icon-user.png" alt="Foto do usuário">
+      <button class="botao-custom botao-sidebar">
+        <a href="user_profile.html">Meu Perfil</a>
+      </button>
+      <button class="botao-custom botao-sidebar">
+        <a href="add_plant.html">Adicionar nova planta</a>
+      </button>
+      <button class="botao-custom botao-sidebar">
+        <a href="">Sair da conta</a>
+      </button>
+    </aside>
+    <main id="principal">
+      <section>
+        <h1 id="title">Adicionar uma nova planta</h1>
+      </section>
+      <section>
+        <form action="/add_plant" method="post">
+          <fieldset>
+            <legend>Preencha os campus relativos a planta:</legend>
+            <label>Nome:
+              <input type="text" name="name" required>
+            </label>
+            <p>Escolha o tipo:
+              <label>
+                <input type="radio" name="type" value="fruit" required>Frutíferas
+              </label>
+              <label>
+                <input type="radio" name="type" value="ornamental" required>Ornamentais
+              </label>
+              <label>
+                <input type="radio" name="type" value="flower" required>Flor
+              </label>
+            </p>
+            <label>Selecione as imagens/fotos:
+              <input type="file" id="imagem" required>
+            </label>
+            <label>Descrição da planta:
+              <textarea name="descricao" id="descricao" cols="50" rows="5" required></textarea>
+            </label>
+            <label>Facilidade de cuidar:
+              <button type="button" class="star1 fa fa-star checked"></button>
+              <button type="button" class="star2 fa fa-star "></button>
+              <button type="button" class="star3 fa fa-star "></button>
+              <button type="button" class="star4 fa fa-star"></button>
+              <button type="button" class="star5 fa fa-star"></button>
+            </label>
+            <label>Quantidade de água necessária:
+              <input id="quantidade-agua" type="range" min="0" max="100" step="1">
+            </label>
+            <button type="reset" class="botao-custom botao-exclude">Limpar formulário</button>
+            <button type="submit" class="botao-custom">Adicionar</button>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+    <footer id="rodape">
+      <div>
+        Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a>
+        from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>, and by 
+        <a href="https://www.klipartz.com title=" title="Klipartz">Klipartz</a>
+      </div>
+    </footer>
+  </div>
+  <script src="scripts/sidebar.js"></script>
 </body>
-
 </html>
