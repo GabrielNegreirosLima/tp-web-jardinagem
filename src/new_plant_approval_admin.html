@@ -2,129 +2,121 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/index.css">
-    <link rel="stylesheet" href="styles/new_plant_approval_admin.css">
-    <link rel="shortcut icon" href="images/lotus.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="scripts/stars_rating.js" defer></script>
-
-    <title>Comunidade de jardinagem</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/index.css">
+  <link rel="stylesheet" href="styles/new_plant_approval_admin.css">
+  <link rel="shortcut icon" href="images/lotus.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="scripts/stars_rating.js" defer></script>
+  <title>Comunidade de jardinagem</title>
 </head>
 
 <body>
-    <header id="cabecalho">
-        <div class="logo">
-            <img src="images/lotus.png" alt="Ícone da comunidade de jardinagem">
-            <h1>Comunidade de jardinagem</h1>
-        </div>
-        <nav>
-            <button class="botao-custom">
-                    <a href="index.html">Página Inicial</a>
-                </button>
-            <button class="botao-custom">
-                    <a href="">Perfil</a>
-                </button>
-            <button class="botao-custom">
-                    <a href="fav_plants.html">Plantas favoritas</a>
-                </button>
-        </nav>
-    </header>
+  <header id="cabecalho">
+    <div class="logo">
+      <img src="images/lotus.png" alt="Ícone da comunidade de jardinagem">
+      <h1>Comunidade de jardinagem</h1>
+    </div>
+    <nav>
+      <button class="botao-custom">
+        <a href="index.html">Página Inicial</a>
+      </button>
+      <button class="botao-custom">
+        <a href="">Perfil</a>
+      </button>
+      <button class="botao-custom">
+        <a href="fav_plants.html">Plantas favoritas</a>
+      </button>
+    </nav>
+  </header>
 
-    <main>
-        <section id="section-one">
-            <h2>Aprovação de solitações para incluir novas plantas</h2>
-            <article class="article-novas-plantas">
-                <div class="div-novas-plantas">
-                    <figure>
-                        <img class="img-inseridas" src="images/margarida.jpg" alt="Uma margarida de cor branca">
+  <main>
+    <section id="section-one">
+        <h2>Aprovação de solitações para incluir novas plantas</h2>
+        <article class="article-novas-plantas">
+            <div class="div-novas-plantas">
+                <figure>
+                    <img class="img-inseridas" src="images/margarida.jpg" alt="Uma margarida de cor branca">
 
-                    </figure>
-                    <p>
-                        By Jose On Jun 20, 2021<time>10:11 pm</time>Lorem ipsum dolor sit amet, consectetur adipisciLorem ipsum dolor sit amet, consectetur adipisci
-                    </p>
-                </div>
-
-                <form>
-                    <button type="submit" id="confirm-button">Confirmar</button>
-                    <button type=" submit" id="excluir-button">Excluir</button>
-                </form>
-            </article>
-            <article class="article-novas-plantas">
-                <div class="div-novas-plantas">
-                    <figure>
-                        <img class="img-inseridas" src="images/marguerite_yellow.jpg" alt="Uma margarida de cor amarela">
-
-                    </figure>
-                    <p>
-                        By Jose On Jun 20, 2021<time>10:11 pm</time>Lorem ipsum dolor sit amet, consectetur adipisciLorem ipsum dolor sit amet, consectetur adipisci
-                    </p>
-                </div>
-
-                <form>
-                    <button type="submit" id="confirm-button">Confirmar</button>
-                    <button type=" submit" id="excluir-button">Excluir</button>
-                </form>
-            </article>
-
-        </section>
-
-        <section id="section-two">
-            <div id="div-edicao">
-                <h2>Edição</h2>
-                <form id="form-pesquisa">
-                    <input id="search-input" type="search" name="search-plants">
-                    <button type="submit">buscar</button>
-                </form>
-            </div>
-            <article id="article-descricao">
-                <div id="div-descricao-img">
-                    <h1>Margarida</h1>
-                    <figure>
-                        <img id="img-descricao" src="images/margarida.jpg" alt="Uma margarida cor branca">
-
-                    </figure>
-                </div>
-
-                <div id="div-descricao-txt">
-                    <h1>Descrição</h1>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </div>
-            </article>
-            <article id="article-facilidade-cuidado">
-                <div id="div-estrelas">
-                    <button type="button" class="star1 fa fa-star checked"></button>
-                    <button type="button" class="star2 fa fa-star "></button>
-                    <button type="button" class="star3 fa fa-star "></button>
-                    <button type="button" class="star4 fa fa-star"></button>
-                    <button type="button" class="star5 fa fa-star"></button>
-                </div>
-                <h1 id="h-facilidade-cuidar">Facilidade de cuidar</h1>
-            </article>
-            <article id="article-consumo-agua">
-
-                <input id="input-consumo-agua" name="consumo-agua" type="range" min="0" max="100" step="10">
-                <label for="input-consumo-agua" id="lbl-consumo-agua ">
-                        <h1>Consumo de água</h1>
-                    </label>
-
-            </article>
-            <div id="div-mais-fotos-planta ">
-                <h1>Mais fotos de Margarida</h1>
-                <article class="article-mais-fotos-planta">
-                    <img class="img-mais-plantas" src="images/marguerite_yellow.jpg" alt="Uma margarida amarela ">
-                    <img class="img-mais-plantas" src="images/margaride_pink.jpg" alt="Uma margarida rosa ">
-                </article>
+                </figure>
+                <p>
+                    By Jose On Jun 20, 2021<time>10:11 pm</time>Lorem ipsum dolor sit amet, consectetur adipisciLorem ipsum dolor sit amet, consectetur adipisci
+                </p>
             </div>
 
-            <form id="form-salvar-edicao">
-                <button type="submit">Salvar edição</button>
+            <form>
+                <button type="submit" id="confirm-button">Confirmar</button>
+                <button type=" submit" id="excluir-button">Excluir</button>
             </form>
-        </section>
-    </main>
+        </article>
+        <article class="article-novas-plantas">
+            <div class="div-novas-plantas">
+                <figure>
+                    <img class="img-inseridas" src="images/marguerite_yellow.jpg" alt="Uma margarida de cor amarela">
 
+                </figure>
+                <p>
+                    By Jose On Jun 20, 2021<time>10:11 pm</time>Lorem ipsum dolor sit amet, consectetur adipisciLorem ipsum dolor sit amet, consectetur adipisci
+                </p>
+            </div>
+
+            <form>
+                <button type="submit" id="confirm-button">Confirmar</button>
+                <button type="submit" id="excluir-button">Excluir</button>
+            </form>
+        </article>
+
+    </section>
+
+    <section id="section-two">
+      <div id="div-edicao">
+        <h2>Edição</h2>
+        <form id="form-pesquisa">
+          <input id="search-input" type="search" name="search-plants">
+          <button type="submit">buscar</button>
+        </form>
+      </div>
+      <article id="article-descricao">
+        <div id="div-descricao-img">
+          <h1>Margarida</h1>
+          <figure>
+            <img id="img-descricao" src="images/margarida.jpg" alt="Uma margarida cor branca">
+          </figure>
+        </div>
+        <div id="div-descricao-txt">
+          <h1>Descrição</h1>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+      </article>
+      <article id="article-facilidade-cuidado">
+        <div id="div-estrelas">
+          <button type="button" class="star1 fa fa-star checked"></button>
+          <button type="button" class="star2 fa fa-star "></button>
+          <button type="button" class="star3 fa fa-star "></button>
+          <button type="button" class="star4 fa fa-star"></button>
+          <button type="button" class="star5 fa fa-star"></button>
+        </div>
+        <h1 id="h-facilidade-cuidar">Facilidade de cuidar</h1>
+      </article>
+      <article id="article-consumo-agua">
+        <input id="input-consumo-agua" name="consumo-agua" type="range" min="0" max="100" step="10">
+        <label for="input-consumo-agua" id="lbl-consumo-agua ">
+          <h1>Consumo de água</h1>
+        </label>
+      </article>
+      <div id="div-mais-fotos-planta ">
+        <h1>Mais fotos de Margarida</h1>
+        <article class="article-mais-fotos-planta">
+          <img class="img-mais-plantas" src="images/marguerite_yellow.jpg" alt="Uma margarida amarela ">
+          <img class="img-mais-plantas" src="images/margaride_pink.jpg" alt="Uma margarida rosa ">
+        </article>
+      </div>
+      <form id="form-salvar-edicao">
+        <button type="submit">Salvar edição</button>
+      </form>
+    </section>
+  </main>
 </body>
-
 </html>

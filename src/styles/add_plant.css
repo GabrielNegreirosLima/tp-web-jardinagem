@@ -1,64 +1,64 @@
 :root{
-    --cor-legenda-underline: pink;
-    --cor-background-fieldset: lightpink;
-    --cor-border-fieldset: var(--cor-header);       /*Include into index.css*/
-    --cor-text: black;
-    --cor-title: brown;
+  --cor-legenda-underline: pink;
+  --cor-background-fieldset: lightpink;
+  --cor-border-fieldset: var(--cor-header);       /*Include into index.css*/
+  --cor-text: black;
+  --cor-title: brown;
 }
 
 #title {
-    color: var(--cor-title);
-    text-align: center;
+  color: var(--cor-title);
+  text-align: center;
 }
 
 legend {
-    padding-bottom: 20px;
-    text-decoration: 2px var(--cor-legenda-underline) underline;
+  padding-bottom: 20px;
+  text-decoration: 2px var(--cor-legenda-underline) underline;
 }
 
 fieldset {
-    display: flex;
-    gap: 20px;
-    flex-flow: column nowrap;
-    align-items: center;
-    width: 600px;
-    border: 2px solid var(--cor-header);
-    margin-left: auto;
-    margin-right: auto;
-    background-color: var(--cor-background-fieldset);
+  display: flex;
+  gap: 20px;
+  flex-flow: column nowrap;
+  align-items: center;
+  width: 600px;
+  border: 2px solid var(--cor-header);
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--cor-background-fieldset);
 }
 
 input[type="radio"] {
-    margin-top: -1px;
-    vertical-align: middle;
+  margin-top: -1px;
+  vertical-align: middle;
 }
-  
+
 textarea {
-    display: block;
-    resize: none;
-    border: 1px solid var(--cor-text);
+  display: block;
+  resize: none;
+  border: 1px solid var(--cor-text);
 }
 
 label, p {
-    font-weight: bold;
-    color: var(--cor-text);
+  font-weight: bold;
+  color: var(--cor-text);
 }
 
 p > label {
-    font-weight: normal;
+  font-weight: normal;
 }
 
 
 input[type="range"] {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 /* Dark mode */
 
 @media (prefers-color-scheme: dark) {
-    :root{
-        --cor-title: white;
-        --cor-background-fieldset: salmon;
-        --cor-legenda-underline: orange;
-    }
+  :root{
+      --cor-title: white;
+      --cor-background-fieldset: salmon;
+      --cor-legenda-underline: orange;
   }
+}
