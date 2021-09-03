@@ -5,3 +5,7 @@ Adicionais implementados até o momento:
 
 * Dark mode
 * Animações CSS
+
+## How to execute this project
+
+
