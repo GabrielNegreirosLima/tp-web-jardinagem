@@ -19,7 +19,7 @@ services:
     restart: unless-stopped
     env_file: ./.env
     ports:
-      - 8080:8080
+      - 8080:3000
     environment:
       - DB_HOST=mysqldb
       - DB_USER=$MYSQLDB_USER
@@ -28,6 +28,8 @@ services:
       - DB_PORT=$MYSQLDB_DOCKER_PORT
     stdin_open: true
     tty: true
+    links:
+      - "mysqldb"
 
 volumes: 
   db:
