@@ -11,6 +11,4 @@ COPY images/ images/
 COPY src/ src/
 COPY db/db.js db/db.js
 
-
-CMD npm start
-
+CMD node src/app.js
