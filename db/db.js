@@ -2,7 +2,7 @@ import mysql from 'mysql2/promise';
 
 const pool = mysql.createPool({
   // configuração de acesso
-  host: '127.0.0.1',
+  host: 'mysqldb',
   database: 'plants',
   user: 'root',
   password: 'd0ntpwnpl3ase',
