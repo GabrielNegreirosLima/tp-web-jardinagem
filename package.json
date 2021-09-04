@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "node ./src/app.js"
+    "start": "sudo docker-compose up --build"
   },
   "dependencies": {
     "dotenv": "^10.0.0",
