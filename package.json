@@ -6,6 +6,7 @@
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "mysql2": "^2.3.0",
+    "hbs": "^4.1.2",
     "scripts": "^0.1.0"
   },
   "type": "module",
