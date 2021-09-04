@@ -1,6 +1,7 @@
-import express from 'express'
-import db from '../../db/db.js'
+import express from 'express';
+// eslint-disable-next-line import/extensions
+import db from '../../db/db.js';
 
-const router = express.Router()
+const router = express.Router();
 
-export default router
+export default router;
