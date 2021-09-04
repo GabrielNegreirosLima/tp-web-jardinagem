@@ -16,6 +16,7 @@ CREATE TABLE IF NOT EXISTS `plants`.`Users`
  `id`       integer NOT NULL AUTO_INCREMENT ,
  `name`     varchar(200) NOT NULL ,
  `email`    varchar(200) NOT NULL ,
+ `password` varchar(45) NOT NULL ,
  `birthday` date NOT NULL ,
  `tel`      varchar(45) NOT NULL ,
  `isAdmin`  tinyint NOT NULL ,
@@ -30,12 +31,15 @@ DROP TABLE IF EXISTS `plants`.`Plants`;
 
 CREATE TABLE IF NOT EXISTS `plants`.`Plants`
 (
- `name`       varchar(200) NOT NULL ,
- `type`       varchar(100) NOT NULL ,
- `facility`   integer NOT NULL ,
- `qtdWater`   integer NOT NULL ,
- `isApproved` tinyint NOT NULL ,
- `id`         integer NOT NULL AUTO_INCREMENT ,
+ `name`        varchar(200) NOT NULL ,
+ `type`        varchar(100) NOT NULL ,
+ `description` varchar(500) NOT NULL ,
+ `pictureUrl`  varchar(500) NOT NULL ,
+ `pictureAlt`  varchar(500) NOT NULL ,
+ `facility`    integer NOT NULL ,
+ `qtdWater`    integer NOT NULL ,
+ `isApproved`  tinyint NOT NULL ,
+ `id`          integer NOT NULL AUTO_INCREMENT ,
 
 PRIMARY KEY (`id`)
 );
