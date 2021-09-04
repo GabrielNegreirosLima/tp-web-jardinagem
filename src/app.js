@@ -7,7 +7,7 @@ dotenv.config();
 
 const app = express();
 
-app.get('/', async (req, res) => {
+app.get('/users', async (req, res) => {
   const [people] = await db.execute({
     sql: 'SELECT * from Users',
     nestTables: true,
