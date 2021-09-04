@@ -9,6 +9,7 @@ RUN npm install
 COPY fonts/ fonts/
 COPY images/ images/
 COPY src/ src/
+COPY db/db.js db/db.js
 
 
 CMD npm start
