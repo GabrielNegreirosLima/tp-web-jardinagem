@@ -20,12 +20,6 @@ router.get('/new/', (req, res) => {
 })
 
 /* POST registra uma nova pessoa */
-// Exercício 1: IMPLEMENTAR AQUI
-// Dentro da callback de tratamento da rota:
-//   1. Fazer a query de INSERT no banco
-//   2. Redirecionar para a rota de listagem de pessoas
-//      - Em caso de sucesso do INSERT, colocar uma mensagem feliz
-//      - Em caso de erro do INSERT, colocar mensagem vermelhinha
 router.post('/', async (req, res) => {
   console.log("post formulario -------------------------------------");
 
