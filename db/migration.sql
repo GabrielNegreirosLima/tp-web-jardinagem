@@ -16,11 +16,12 @@ CREATE TABLE IF NOT EXISTS `plants`.`Users`
  `id`       integer NOT NULL AUTO_INCREMENT ,
  `name`     varchar(200) NOT NULL ,
  `email`    varchar(200) NOT NULL ,
+ `sex`      varchar(10) NOT NULL,
  `password` varchar(45) NOT NULL ,
  `birthday` date NOT NULL ,
  `tel`      varchar(45) NOT NULL ,
  `isAdmin`  tinyint NOT NULL ,
-
+ `pictureUrl`  varchar(500) NOT NULL ,
 PRIMARY KEY (`id`)
 );
 
