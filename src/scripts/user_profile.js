@@ -9,11 +9,3 @@ editButtonEl.addEventListener('click', () => {
   saveButtonEl.removeAttribute('disabled');
   editButtonEl.setAttribute('disabled', "''");
 });
-
-saveButtonEl.addEventListener('click', () => {
-  inputs.forEach((el) => {
-    el.setAttribute('disabled', "''");
-  });
-  saveButtonEl.setAttribute('disabled', "''");
-  editButtonEl.removeAttribute('disabled');
-});
