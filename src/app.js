@@ -10,6 +10,7 @@ import express from 'express'
 // de forma a tornar o código do projeto organizado
 import index from './routes/index.js'
 import user from './routes/user.js'
+import fav from './routes/fav.js'
 
 dotenv.config()
 
@@ -26,6 +27,7 @@ app.set('view engine', 'hbs')
 // configura as rotas "de cada entidade" da aplicação (separadinho, organizado)
 app.use('/', index)
 app.use('/users', user)
+app.use('/fav', fav)
 
 app.use(express.static(path.join(__dirname, '')))   // serve arquivos estáticos
 
