@@ -6,8 +6,8 @@ WORKDIR /app
 COPY package.json .
 RUN npm install
 
-COPY fonts/ fonts/
-COPY images/ images/
+COPY src/ fonts/
+COPY src/ images/
 COPY src/ src/
 COPY db/db.js db/db.js
 
