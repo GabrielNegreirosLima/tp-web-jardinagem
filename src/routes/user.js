@@ -4,13 +4,24 @@ import db from '../../db/db.js';
 
 const router = express.Router();
 
-router.get('/', async (req, res) => {
-  const [people] = await db.execute({
-    sql: 'SELECT * from Users',
-    nestTables: true,
-  });
+router.get('/profile/:id', async (req, res) => {
+  const { id } = req.params;
 
-  res.json({ people });
+  try {
+    const [user] = await db.execute({
+      sql: `SELECT *
+      FROM Users
+      WHERE id= ?`,
+      values: [id],
+    });
+
+    res.render('user_profile', {
+      user,
+    });
+  } catch (error) {
+    console.log(error);
+    res.sendStatus(501);
+  }
 });
 
 export default router;

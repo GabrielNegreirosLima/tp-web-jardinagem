@@ -20,7 +20,7 @@ CREATE TABLE IF NOT EXISTS `plants`.`Users`
  `birthday` date NOT NULL ,
  `tel`      varchar(45) NOT NULL ,
  `isAdmin`  tinyint NOT NULL ,
-
+ `pictureUrl`  varchar(500) NOT NULL ,
 PRIMARY KEY (`id`)
 );
 
