@@ -3,10 +3,16 @@
     "start": "sudo docker-compose up --build"
   },
   "dependencies": {
+    "connect-flash": "^0.1.1",
+    "crypto-js": "^4.1.1",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "mysql2": "^2.3.0",
+    "express-flash": "github:RGBboy/express-flash",
     "hbs": "^4.1.2",
+    "method-override": "^3.0.0",
+    "morgan": "^1.10.0",
+    "mysql2": "^2.3.0",
+    "object-hash": "^2.2.0",
     "scripts": "^0.1.0"
   },
   "type": "module",
