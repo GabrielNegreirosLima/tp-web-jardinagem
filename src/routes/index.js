@@ -21,8 +21,6 @@ router.get('/', async (req, res, next) => {
             }           
         })       
 
-        console.log(plants)
-
         res.format({
             html: () => res.render('index', {plants})
         })
