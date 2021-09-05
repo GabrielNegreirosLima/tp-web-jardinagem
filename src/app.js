@@ -11,6 +11,7 @@ import express from 'express';
 import index from './routes/index.js'
 import user from './routes/user.js'
 import fav from './routes/fav.js'
+import plant from './routes/plant.js'
 
 
 dotenv.config();
@@ -30,6 +31,7 @@ app.set('view engine', 'hbs');
 app.use('/', index)
 app.use('/users', user)
 app.use('/fav', fav)
+app.use('/plant', plant)
 
 app.use(express.static(path.join(__dirname, '')))   // serve arquivos estáticos
 

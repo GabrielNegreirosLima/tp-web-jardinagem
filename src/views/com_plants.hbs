@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light dark">
     <title>Comunidade de jardinagem</title>
-    <link rel="shortcut icon" href="images/lotus.png">
-    <link rel="stylesheet" href="styles/index.css">
-    <link rel="stylesheet" href="styles/com_plants.css">
+    <link rel="shortcut icon" href="../images/lotus.png">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/com_plants.css">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="scripts/stars_rating.js" defer></script>
+    <script src="../scripts/stars_rating.js" defer></script>
 </head>
 
 <body>
@@ -20,27 +20,24 @@
         <header id="cabecalho">
             <button id="toggle-sidebar">☰</button>
             <div class="logo">
-                <img src="images/lotus.png" alt="Ícone da comunidade de jardinagem">
+                <img src="../images/lotus.png" alt="Ícone da comunidade de jardinagem">
                 <h1>Comunidade de jardinagem</h1>
             </div>
             <nav>
                 <button class="botao-custom">
-                    <a href="index.html">Página Inicial</a>
+                    <a href="">Página Inicial</a>
                 </button>
                 <button class="botao-custom">
                     <a href="user_profile.html">Perfil</a>
                 </button>
                 <button class="botao-custom">
                     <a href="fav_plants.html">Plantas favoritas</a>
-                </button>
-                <button class="botao-custom">
-                    <a href="com_plants.html">Comentar planta</a>
-                </button>
+                </button>                
                 </button>
             </nav>
         </header>
         <aside id="barra-lateral">
-            <img src="images/icon-user.png" alt="Foto do usuário">
+            <img src="../images/icon-user.png" alt="Foto do usuário">
             <button class="botao-custom botao-sidebar">
                 <a href="">Meu Perfil</a>
             </button>
@@ -54,20 +51,20 @@
         <main id="principal">
             <div id="pagina-planta">
                 <article id="detalhes-planta">
-                    <h1>Margarida</h1>
+                    <h1>{{plant.name}}</h1>
                     <section id="avaliacao-planta">
                         <label>Facilidade de cuidar:
-                            <button class="star1 fa fa-star checked" disabled></button>
-                            <button class="star2 fa fa-star checked" disabled></button>
-                            <button class="star3 fa fa-star" disabled></button>
-                            <button class="star4 fa fa-star" disabled></button>
-                            <button class="star5 fa fa-star" disabled></button>
-                        </label>
+                            <p>
+                                {{#each plant.star}}
+                                    {{{this}}}
+                                {{/each}}
+                            </p> 
+                        </label>             
                         <label for="quantidade-agua">Quantidade de água</label>
-                        <input id="quantidade-agua" type="range" min="0" max="100" step="1" disabled>
+                        <input id="quantidade-agua" type="range" min="0" max="10" step="1" value='{{plant.qtdWater}}' disabled>
                     </section>
                     <section id="fotos-planta">
-                        <img src="images/margarida.jpg" alt="Imagem de uma margarida branca">
+                        <img src="../{{plant.pictureUrl}}" alt="{{plant.pictureAlt}}">
                         <h2>Mais fotos da planta</h2>
                         <article>
                             <img class="more-photos" src="images/margarida-2.jpg" alt="Mais uma foto de margarida branca">
@@ -76,36 +73,23 @@
                     <section>
                         <h2>Descrição da planta</h2>
                         <p>
-                            é o nome popular comum a uma grande variedade de plantas (e flor respectiva, ou melhor, 
-                            a sua inflorescência). Na verdade, não existe grande concordância entre os autores quanto 
-                            à utilização deste nome, que apresenta muitas variantes. Há mesmo aqueles que designam de 
-                            "margarida" qualquer planta da família das Compostas. Além do mais, esta designação é por 
-                            vezes apresentada como sinónimo de bem-me-quer, malmequer, bonina, etc, que por sua vez, 
-                            são também nomes utilizadas para espécies diversas que nem sempre coincidem. 
+                            {{plant.description}}
                         </p>
                     </section>
                 </article>
-                <section id="comentarios-planta">
-                    <h2>Todos os comentários</h2>
-                    <article>
-                        <h3 class="username-comment">
-                            Joana
-                        </h3>
-                        Ótima planta, muito bonitinha.
-                    </article>
-                    <article>
-                        <h3 class="username-comment">
-                            Andréia
-                        </h3>
-                        Todas as minhas morreram :(
-                    </article>
-                    <article>
-                        <h3 class="username-comment">
-                            João
-                        </h3>
-                        Acabei de tirar 4 mudas, alguém quer? :D
-                    </article>
-                </section>
+                {{#if commentaries}}
+                    <section id="comentarios-planta">
+                        <h2>Todos os comentários</h2>
+                            {{#each commentaries}}
+                                <article>
+                                    <h3 class="username-comment">
+                                        {{name}}
+                                    </h3>
+                                    {{text}}
+                                </article>
+                            {{/each}}                                        
+                    </section>
+                {{/if}}
                 <section id="avaliar-planta">
                     <h2>Avaliar planta</h2>
                     <form action="com_plants.html" method="post">
@@ -135,7 +119,7 @@
         </footer>
     </div>
 
-    <script src="scripts/sidebar.js"></script>
+    <script src="../scripts/sidebar.js"></script>
 
 </body>
 
