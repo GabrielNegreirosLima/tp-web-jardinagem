@@ -1,3 +1,8 @@
+// módulos da plataforma
+import path from 'path';
+
+// módulos npm
+import hbs from 'hbs';
 import dotenv from 'dotenv';
 import express from 'express';
 
@@ -21,12 +26,7 @@ app.set('view engine', 'hbs');
 app.use('/', index);
 app.use('/users', user);
 
-// uma rota "catch-all" para erros de caminho inexistente
-app.use((req, res, next) => {
-  const err = new Error('Not Found');
-  err.status = 404;
-  next(err);
-});
+app.use(express.static(path.join(__dirname, ''))); // serve arquivos estáticos
 
 const server = app.listen(3000, () => {
   const host = server.address().address;
