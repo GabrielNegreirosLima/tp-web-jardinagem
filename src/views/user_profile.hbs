@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="color-scheme" content="light dark">
   <title>Comunidade de jardinagem</title>
-  <link rel="shortcut icon" href="images/lotus.png">
-  <link rel="stylesheet" href="../styles/index.css">
-  <link rel="stylesheet" href="../styles/user_profile.css">
+  <link rel="shortcut icon" href="../../images/lotus.png">
+  <link rel="stylesheet" href="../../styles/index.css">
+  <link rel="stylesheet" href="../../styles/user_profile.css">
 </head>
 
 <body>
@@ -14,7 +14,7 @@
     <header id="cabecalho">
       <button id="toggle-sidebar">☰</button>
       <div class="logo">
-        <img src="images/lotus.png" alt="Ícone da comunidade de jardinagem">
+        <img src="../../../images/lotus.png" alt="Ícone da comunidade de jardinagem">
         <h1>Comunidade de jardinagem</h1>
       </div>
       <nav>
@@ -44,30 +44,30 @@
     <main id="principal">
         <section>
           <h1 id="title">Perfil do Usuário</h1>
-          <img src="images/icon-user.png" alt="Foto do usuário">
+          <img src="{{pictureUrl}}" alt="Foto do usuário">
         </section>
         <section>
           <button id="edit" class="botao-custom">Editar Perfil</button>
           <form action="/add_plant" method="post">
             <fieldset>
               <label>Nome e sobrenome: 
-                <input type="text" name="name" value="José da Silva" required disabled>
+                <input type="text" name="name" value="{{name}}" required disabled>
               </label>
               <label>Seu email:
-                <input type="email" required disabled>
+                <input type="email" value="{{email}}" required disabled>
               </label>
               <label>Data de nascimento: 
-                <input type="date" id="data-de-nascimento" name="data-de-nascimento" max="2021-1-1" value="1997-1-1" required disabled>
+                <input type="date" id="data-de-nascimento" name="data-de-nascimento" max="{{birthday}}" value="1997-1-1" required disabled>
               </label>
               <p>Sexo:
                 <label>
-                  <input type="radio" name="gender" value="feminino"  required disabled>Feminino
-                  <input type="radio" name="gender" value="masculino" required  checked disabled>Masculino
-                  <input type="radio" name="gender" value="outro" required disabled>Outros
+                  <input type="radio" name="gender" value="feminino"  required {{{setChecked feminino sex}}}  disabled>Feminino
+                  <input type="radio" name="gender" value="masculino" required  {{{setChecked masculino sex}}} disabled>Masculino
+                  <input type="radio" name="gender" value="outro" required {{{setChecked outro sex}}}  disabled>Outros
                 </label>           
               </p>
               <label>Telefone
-                <input type="tel" name="phone" id="phone" value="(31) 99999-9999" required disabled>
+                <input type="tel" name="phone" id="phone" value="{{tel}}" required disabled>
               </label>
               <button class="botao-custom" id="save-profile" disabled>Salvar</button>
             </fieldset>
