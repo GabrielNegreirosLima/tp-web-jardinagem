@@ -58,15 +58,11 @@
               <h3>{{name}}</h3>
               <img src="{{pictureUrl}}" class="foto-planta" alt="{{pictureAlt}}">
               <label>Facilidade de cuidar:
-                <button class="fa fa-star checked" disabled></button>
-                <button class="fa fa-star checked" disabled></button>
-                <button class="fa fa-star checked" disabled></button>
-                <button class="fa fa-star checked" disabled></button>
-                <button class="fa fa-star" disabled></button>
-              </label>
-              <p>
-                {{description}}
-              </p>
+                <p>{{#each star}}
+                    {{{this}}}
+                   {{/each}}</p> 
+              </label>             
+                {{description}}              
             </a>
           </article> 
           {{/each}}                     

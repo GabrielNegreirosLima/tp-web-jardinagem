@@ -3,9 +3,25 @@ import db from '../../db/db.js'
 
 const router = express.Router()
 
-router.get('/', async (req, res) => {
+router.get('/', async (req, res, next) => {
     try {
-        const [plants] = await db.execute('SELECT * FROM Plants') 
+        let [plants] = await db.execute('SELECT * FROM Plants') 
+
+        plants.map(plant => {
+           
+            plant.star = []            
+            
+            for (let index = 0; index < 5; index++) {
+                if(index < plant.facility){
+                    plant.star.push('<button class="fa fa-star checked" disabled></button>')
+                }
+                else{
+                    plant.star.push('<button class="fa fa-star" disabled></button>')
+                }                  
+            }           
+        })       
+
+        console.log(plants)
 
         res.format({
             html: () => res.render('index', {plants})
