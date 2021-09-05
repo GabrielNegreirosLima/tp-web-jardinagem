@@ -15,12 +15,13 @@ router.get('/profile/:id', async (req, res) => {
       values: [id],
     });
 
-    res.render('user_profile', {
-      user,
+    res.format({
+      html: () => res.render('user_profile', { user }),
     });
   } catch (error) {
     console.log(error);
-    res.sendStatus(501);
+    error.friendlyMessage = 'Não foi possível recuperar a lista de usuários';
+    next(error);
   }
 });
 
