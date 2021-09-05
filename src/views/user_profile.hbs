@@ -57,13 +57,13 @@
                 <input type="email" value="{{email}}" required disabled>
               </label>
               <label>Data de nascimento: 
-                <input type="date" id="data-de-nascimento" name="data-de-nascimento" max="{{birthday}}" value="1997-1-1" required disabled>
+                <input type="date" id="data-de-nascimento" name="data-de-nascimento" value="{{birthday}}" required disabled>
               </label>
               <p>Sexo:
                 <label>
-                  <input type="radio" name="gender" value="feminino"  required {{{setChecked feminino sex}}}  disabled>Feminino
-                  <input type="radio" name="gender" value="masculino" required  {{{setChecked masculino sex}}} disabled>Masculino
-                  <input type="radio" name="gender" value="outro" required {{{setChecked outro sex}}}  disabled>Outros
+                  <input type="radio" name="gender" value="feminino"  required {{{setChecked "feminino" sex}}}  disabled>Feminino
+                  <input type="radio" name="gender" value="masculino" required  {{{setChecked "masculino" sex}}} disabled>Masculino
+                  <input type="radio" name="gender" value="outro" required {{{setChecked "outro" sex}}}  disabled>Outros
                 </label>           
               </p>
               <label>Telefone
