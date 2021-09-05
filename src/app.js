@@ -19,6 +19,8 @@ const app = express();
 const __dirname = new URL('.', import.meta.url).pathname;
 
 app.use(express.json()); // necessário pra POST, PUT, PATCH etc.
+app.use(express.urlencoded({ extended: false }));
+app.set('json spaces', 2);
 
 // configura a pasta que contém as views e o handlebars como templating engine
 app.set('views', `${__dirname}/views`);

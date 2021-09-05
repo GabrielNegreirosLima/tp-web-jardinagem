@@ -39,8 +39,31 @@ router.get('/profile/:id', async (req, res) => {
       }),
     });
   } catch (error) {
+    error.friendlyMessage = 'Não foi possível recuperar o usuário/perfil.';
     console.log(error);
-    error.friendlyMessage = 'Não foi possível recuperar a lista de usuários';
+    res.redirect('../../');
+  }
+});
+
+router.post('/profile/:id', async (req, res) => {
+  const { id } = req.params;
+  const { name } = req.body;
+  const { birthday } = req.body;
+  const { sex } = req.body;
+  const { tel } = req.body;
+
+  try {
+    await db.execute(
+      `UPDATE Users
+      SET name=?, birthday=?, sex=?, tel=?
+      WHERE id=?`,
+      [name, birthday, sex, tel, id],
+    );
+
+    res.redirect(`/users/profile/${id}`);
+  } catch (error) {
+    error.friendlyMessage = 'Não foi possível atualizar o usuário.';
+    console.log(error);
     res.redirect('../../');
   }
 });
