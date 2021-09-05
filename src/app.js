@@ -5,8 +5,7 @@ import path from 'path'
 import hbs from 'hbs'
 import dotenv from 'dotenv'
 import express from 'express'
-import logger from 'morgan'
-import methodOverride from 'method-override'
+
 
 
 // a definição das rotas de cada "entidade" está isolada em seu próprio arquivo
