@@ -14,6 +14,7 @@ import index from './routes/index.js'
 import user from './routes/user.js'
 import register from './routes/register.js'
 import fav from './routes/fav.js'
+import plant from './routes/plant.js'
 
 dotenv.config();
 
@@ -34,6 +35,7 @@ app.use('/', index)
 app.use('/users', user)
 app.use('/register', register)//registrar usuario
 app.use('/fav', fav)
+app.use('/plant', plant)
 
 app.use(express.static(path.join(__dirname, '')))   // serve arquivos estáticos
 

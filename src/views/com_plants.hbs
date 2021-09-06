@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title>Comunidade de jardinagem</title>
+    <link rel="shortcut icon" href="../images/lotus.png">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/com_plants.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../scripts/stars_rating.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <header id="cabecalho">
+            <button id="toggle-sidebar">☰</button>
+            <div class="logo">
+                <img src="../images/lotus.png" alt="Ícone da comunidade de jardinagem">
+                <h1>Comunidade de jardinagem</h1>
+            </div>
+            <nav>
+                <button class="botao-custom">
+                    <a href="/">Página Inicial</a>
+                </button>
+                <button class="botao-custom">
+                    <a href="/users/profile/1">Perfil</a>
+                </button>
+                <button class="botao-custom">
+                    <a href="/fav/1">Plantas favoritas</a>
+                </button>                
+                </button>
+            </nav>
+        </header>
+        <aside id="barra-lateral">
+            <img src="../images/icon-user.png" alt="Foto do usuário">
+            <button class="botao-custom botao-sidebar">
+                <a href="">Meu Perfil</a>
+            </button>
+            <button class="botao-custom botao-sidebar">
+                <a href="add_plant.html">Adicionar nova planta</a>
+            </button>
+            <button class="botao-custom botao-sidebar">
+                <a href="">Sair da conta</a>
+            </button>
+        </aside>
+        <main id="principal">
+            <div id="pagina-planta">
+                <article id="detalhes-planta">
+                    <h1>{{plant.name}}</h1>
+                    <section id="avaliacao-planta">
+                        <label>Facilidade de cuidar:
+                            <p>
+                                {{#each plant.star}}
+                                    {{{this}}}
+                                {{/each}}
+                            </p> 
+                        </label>             
+                        <label for="quantidade-agua">Quantidade de água</label>
+                        <input id="quantidade-agua" type="range" min="0" max="10" step="1" value='{{plant.qtdWater}}' disabled>
+                    </section>
+                    <section id="fotos-planta">
+                        <img src="../{{plant.pictureUrl}}" alt="{{plant.pictureAlt}}">
+                        <h2>Mais fotos da planta</h2>
+                        <article>
+                            <img class="more-photos" src="images/margarida-2.jpg" alt="Mais uma foto de margarida branca">
+                        </article>
+                    </section>
+                    <section>
+                        <h2>Descrição da planta</h2>
+                        <p>
+                            {{plant.description}}
+                        </p>
+                    </section>
+                </article>
+                {{#if commentaries}}
+                    <section id="comentarios-planta">
+                        <h2>Todos os comentários</h2>
+                            {{#each commentaries}}
+                                <article>
+                                    <h3 class="username-comment">
+                                        {{name}}
+                                    </h3>
+                                    {{text}}
+                                </article>
+                            {{/each}}                                        
+                    </section>
+                {{/if}}
+                <section id="avaliar-planta">
+                    <h2>Avaliar planta</h2>
+                    <form action="/plant/commentary/{{plant.id}}" method="post">
+                        <label for="comentario">Comentário</label>
+                        <textarea name="comentario" id="comentario" required></textarea>                        
+                        <button type="submit" id="enviar-avaliacao" class="botao-custom">Enviar avaliação</button>
+                    </form>
+                </section>
+            </div>
+        </main>
+        <footer id="rodape">
+            <div>
+                Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a>
+                from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>, and by <a
+                    href="https://www.klipartz.com title=" title="Klipartz">Klipartz</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../scripts/sidebar.js"></script>
+
+</body>
+
+</html>
