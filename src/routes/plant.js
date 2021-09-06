@@ -37,8 +37,6 @@ router.get('/:id', async (req, res, next) => {
              [req.params.id]
         ) 
 
-        console.log(commentaries)
-
         res.format({
             html: () => res.render('com_plants', {plant: plant[0], commentaries})
         })
@@ -47,6 +45,34 @@ router.get('/:id', async (req, res, next) => {
         console.error(error)
         error.friendlyMessage = 'Não foi possível recuperar a planta desejada'
         next(error)
+    }
+})
+
+router.post('/commentary/:id', async (req, res, next) => {
+    
+    var plantId = req.params.id
+    
+    console.log(req.body.comentario)
+    
+    try {
+        res.redirect(`/plant/${plantId}`);
+
+        const[insertResult] = await db.execute(
+            `INSERT INTO Commentaries (id, plant, user, text) 
+             VALUES (NULL, ?, ?, ?)`,
+             [plantId, 1, req.body.comentario]
+        )
+
+        if (!insertResult || insertResult.affectedRows < 1) {
+            console.log('comentario não pode ser adicionado.')
+          } else {
+            console.log('comentario adicionado com sucesso.')
+          }
+
+    } catch (error) {
+        console.error(error)
+        error.friendlyMessage = 'Não foi possível adicionar um comentário à planta desejada'
+        res.redirect(`/users/${plantId}`);
     }
 })
 
