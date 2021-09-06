@@ -3,16 +3,6 @@ import hash from 'object-hash'
 import db from '../../db/db.js';
 
 const router = express.Router();
-/* GET formulario de registro de nova pessoa */
-router.get('/', async (req, res) => {
-  const [people] = await db.execute({
-    sql: 'SELECT * from Users',
-    nestTables: true,
-  });
-
-  res.json({ people });
-});
-
 
 router.get('/new/', (req, res) => {
   res.render('register', {
@@ -21,13 +11,11 @@ router.get('/new/', (req, res) => {
 
 /* POST registra uma nova pessoa */
 router.post('/', async (req, res) => {
-  console.log("post formulario -------------------------------------");
 
-  //teste
-  console.log(req.body)
-
-  const name = req.body.name;
-  const email = req.body.email;
+  const name_raw = req.body.name;
+  const name = name_raw.toUpperCase()
+  const email_raw = req.body.email;
+  const email = email_raw.toUpperCase()
   const sex = req.body.gender;
   const password = hash.sha1(req.body.password);
   const birthday = req.body.date;
