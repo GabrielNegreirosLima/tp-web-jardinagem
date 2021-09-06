@@ -3,6 +3,44 @@ import db from '../../db/db.js'
 
 const router = express.Router()
 
+router.post('', async (req, res, next) => {
+    try {
+        console.log(req.body)
+
+        const [insertResult] = await db.execute(
+            `INSERT INTO Plants 
+             (name, type, description, pictureUrl, pictureAlt, facility, qtdWater, isApproved, id) 
+             VALUES (?, ?, ?, ?, '', 0, ?, 0, NULL)`,
+             [req.body.name, req.body.type, req.body.descricao, req.body.imagem, req.body.qtdWater]
+        )
+
+        if (!insertResult || insertResult.affectedRows < 1) {
+            console.log('planta não pode ser adicionada.')
+          } else {
+            console.log('planta adicionado com sucesso.')
+          }
+
+          res.redirect(`/`);
+
+    } catch (error) {
+        console.error(error)
+        error.friendlyMessage = 'Não foi possível recuperar a planta desejada'
+        next(error)
+    }
+})
+
+router.get('/add', async (req, res, next) => {
+    try {
+        res.format({
+            html: () => res.render('add_plant')
+        })
+    } catch (error) {
+        console.error(error)
+        error.friendlyMessage = 'Não foi possível recuperar a planta desejada'
+        next(error)
+    }
+})
+
 router.get('/:id', async (req, res, next) => {
     
     const id = req.params.id
