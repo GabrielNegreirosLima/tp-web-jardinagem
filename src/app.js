@@ -15,6 +15,7 @@ import user from './routes/user.js'
 import register from './routes/register.js'
 import fav from './routes/fav.js'
 import login from './routes/login.js'
+import session, { Cookie } from 'express-session'
 
 dotenv.config();
 
@@ -29,6 +30,22 @@ app.set('json spaces', 2);
 app.set('views', `${__dirname}/views`);
 app.set('view engine', 'hbs');
 
+//sessão
+const TWO_HOURS = 1000 * 60 * 60 * 2;
+const SESS_NAME = 'sid';
+const SESS_SECRET = 'chamachuva';
+
+app.use(session({
+  secret: SESS_SECRET,
+  resave: false,
+  saveUninitialized: true,
+  name: SESS_NAME,
+
+  cookie: {
+    maxAge: TWO_HOURS,
+
+  }
+}))
 
 // configura as rotas "de cada entidade" da aplicação (separadinho, organizado)
 app.use('/', index)
@@ -39,7 +56,6 @@ app.use('/fav', fav)
 
 
 app.use(express.static(path.join(__dirname, '')))   // serve arquivos estáticos
-
 
 const server = app.listen(3000, () => {
   const host = server.address().address;

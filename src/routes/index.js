@@ -5,24 +5,30 @@ const router = express.Router()
 
 router.get('/', async (req, res, next) => {
     try {
-        let [plants] = await db.execute('SELECT * FROM Plants') 
+        const { userId } = req.session;
+
+
+        console.log("/sessao:");
+        console.log(req.session.userId);
+
+        let [plants] = await db.execute('SELECT * FROM Plants')
 
         plants.map(plant => {
-           
-            plant.star = []            
-            
+
+            plant.star = []
+
             for (let index = 0; index < 5; index++) {
-                if(index < plant.facility){
+                if (index < plant.facility) {
                     plant.star.push('<button class="fa fa-star checked" disabled></button>')
                 }
-                else{
+                else {
                     plant.star.push('<button class="fa fa-star" disabled></button>')
-                }                  
-            }           
-        })       
+                }
+            }
+        })
 
         res.format({
-            html: () => res.render('index', {plants})
+            html: () => res.render('index', { plants })
         })
     } catch (error) {
         console.error(error)

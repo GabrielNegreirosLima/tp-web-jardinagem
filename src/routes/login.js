@@ -23,6 +23,7 @@ router.get('/new/', (req, res) => {
 /* POST login de uma pessoa*/
 router.post('/', async (req, res) => {
 
+
   const email = req.body.email;
   const password = hash.sha1(req.body.password);
   console.log(req.body);
@@ -33,9 +34,15 @@ router.post('/', async (req, res) => {
     values: [email, password],
     nestTables: true
   });
-  res.json({ user });
+
   console.log('user');
-  console.log(user);
+
+
+  const userId = user[0].Users.id;
+  console.log(userId);
+  req.session.userId = userId;
+  console.log(req.session)
+  res.redirect('/');
 });
 
 
